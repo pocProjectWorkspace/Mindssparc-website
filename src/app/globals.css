@@ -10,7 +10,7 @@
   --color-accent: var(--accent);
   --color-accent-muted: var(--accent-muted);
   --font-sans: var(--font-inter);
-  
+
   /* Custom Spacing if needed, sticking to defaults which are good */
 }
 
@@ -23,33 +23,24 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  
+
   /* Midnight Blue / Deep Charcoal */
-  --primary: #0f172a; 
+  --primary: #0f172a;
   --primary-foreground: #ffffff;
-  
+
   /* Light Gray */
   --secondary: #f8f9fa;
   --secondary-foreground: #0f172a;
-  
+
   /* Muted Teal */
   --accent: #2d6a4f;
-  --accent-muted: #e6fcf5; /* Very light teal for backgrounds */
-  
+  --accent-muted: #e6fcf5;
+  /* Very light teal for backgrounds */
+
   --font-inter: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* Optional: Dark mode adjustments */
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #e2e8f0; /* Light text on dark */
-    --primary-foreground: #0f172a;
-    --secondary: #171717;
-    --secondary-foreground: #ededed;
-  }
-}
+/* Dark mode preferences removed to enforce brand consistency */
 
 body {
   background-color: var(--background);
