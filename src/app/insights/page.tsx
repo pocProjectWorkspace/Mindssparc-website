@@ -2,45 +2,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ArrowRight } from "lucide-react";
-
-const articles = [
-    {
-        category: 'Cybersecurity',
-        title: 'The Zero Trust Imperative in 2026',
-        excerpt: 'Why traditional perimeter defenses are obsolete in an era of distributed enterprise.',
-        date: 'Oct 12, 2025',
-        readTime: '5 min read',
-        featured: true
-    },
-    {
-        category: 'AI Strategy',
-        title: 'Generative AI: Moving Beyond the Hype',
-        excerpt: 'Implementing practical use cases that drive real ROI.',
-        date: 'Sep 28, 2025',
-        readTime: '8 min read'
-    },
-    {
-        category: 'Market Intelligence',
-        title: 'Emerging Markets Outlook Q4',
-        excerpt: 'Key growth indicators in APAC and LATAM regions.',
-        date: 'Sep 15, 2025',
-        readTime: '12 min read'
-    },
-    {
-        category: 'Digital Transformation',
-        title: 'Cloud Sovereignty and Data Resonance',
-        excerpt: 'Navigating the new regulatory landscape for cross-border data.',
-        date: 'Sep 02, 2025',
-        readTime: '6 min read'
-    },
-    {
-        category: 'Leadership',
-        title: 'The Evolving Role of the CISO',
-        excerpt: 'From technical guardian to strategic business enabler.',
-        date: 'Aug 24, 2025',
-        readTime: '4 min read'
-    }
-];
+import { articles } from "@/data/insights";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function InsightsPage() {
     const featured = articles.find(a => a.featured);
@@ -60,39 +24,50 @@ export default function InsightsPage() {
 
                         {/* Featured Article */}
                         {featured && (
-                            <div className="mb-24 relative rounded-2xl overflow-hidden bg-primary text-primary-foreground grid grid-cols-1 lg:grid-cols-2">
-                                <div className="p-12 md:p-16 flex flex-col justify-center">
-                                    <div className="flex items-center gap-4 text-sm font-semibold text-accent mb-6 uppercase tracking-wider">
-                                        <span>Featured • {featured.category}</span>
+                            <Link href={`/insights/${featured.slug}`} className="block group">
+                                <div className="mb-24 relative rounded-2xl overflow-hidden bg-primary text-primary-foreground grid grid-cols-1 lg:grid-cols-2 shadow-2xl transition-transform hover:-translate-y-1 duration-300">
+                                    <div className="p-12 md:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                        <div className="flex items-center gap-4 text-sm font-semibold text-accent mb-6 uppercase tracking-wider">
+                                            <span>Featured • {featured.category}</span>
+                                        </div>
+                                        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight group-hover:text-gray-300 transition-colors">
+                                            {featured.title}
+                                        </h2>
+                                        <p className="text-lg text-gray-400 mb-8 max-w-xl">
+                                            {featured.excerpt}
+                                        </p>
+                                        <div className="flex items-center gap-4 text-sm text-gray-500 mb-8">
+                                            <span>{featured.date}</span>
+                                            <span>•</span>
+                                            <span>{featured.readTime}</span>
+                                        </div>
+                                        <span className="self-start px-8 py-4 bg-white text-primary font-bold rounded-full group-hover:bg-gray-100 transition-colors">
+                                            Read Article
+                                        </span>
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight hover:text-gray-300 transition-colors cursor-pointer">
-                                        {featured.title}
-                                    </h2>
-                                    <p className="text-lg text-gray-400 mb-8 max-w-xl">
-                                        {featured.excerpt}
-                                    </p>
-                                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-8">
-                                        <span>{featured.date}</span>
-                                        <span>•</span>
-                                        <span>{featured.readTime}</span>
+                                    <div className="bg-gray-800 min-h-[400px] relative order-1 lg:order-2">
+                                        <Image
+                                            src={featured.image}
+                                            alt={featured.title}
+                                            fill
+                                            className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                        />
                                     </div>
-                                    <button className="self-start px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-colors">
-                                        Read Article
-                                    </button>
                                 </div>
-                                <div className="bg-gray-800 min-h-[400px]">
-                                    {/* Image placeholder */}
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900" />
-                                </div>
-                            </div>
+                            </Link>
                         )}
 
                         {/* Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                             {others.map((article) => (
-                                <article key={article.title} className="group cursor-pointer">
-                                    <div className="aspect-[16/9] bg-gray-100 mb-6 rounded-lg overflow-hidden">
-                                        <div className="w-full h-full bg-secondary group-hover:scale-105 transition-transform duration-500" />
+                                <Link key={article.slug} href={`/insights/${article.slug}`} className="group cursor-pointer block">
+                                    <div className="aspect-[16/9] bg-gray-100 mb-6 rounded-lg overflow-hidden relative">
+                                        <Image
+                                            src={article.image}
+                                            alt={article.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
                                     </div>
                                     <div className="flex items-center gap-4 text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">
                                         <span className="text-accent">{article.category}</span>
@@ -106,7 +81,7 @@ export default function InsightsPage() {
                                     <div className="flex items-center gap-2 text-sm text-primary font-medium hover:text-accent transition-colors">
                                         Read more <ArrowRight className="w-4 h-4" />
                                     </div>
-                                </article>
+                                </Link>
                             ))}
                         </div>
 

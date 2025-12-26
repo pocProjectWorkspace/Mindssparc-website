@@ -1,10 +1,29 @@
 import Link from 'next/link';
 
 const footerLinks = {
-    Services: ['Strategy', 'Digital Transformation', 'Data & Analytics', 'Cybersecurity'],
-    Industries: ['Financial Services', 'Healthcare', 'Technology', 'Public Sector'],
-    Company: ['About Us', 'Careers', 'Insights', 'Contact'],
-    Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy']
+    Services: [
+        { name: 'Secure', href: '/services/secure' },
+        { name: 'Intelligence', href: '/services/intelligence' },
+        { name: 'Search', href: '/services/search' },
+        { name: 'All Services', href: '/services' }
+    ],
+    Industries: [
+        { name: 'Financial Services', href: '/industries' },
+        { name: 'Healthcare', href: '/industries' },
+        { name: 'Technology', href: '/industries' },
+        { name: 'Public Sector', href: '/industries' }
+    ],
+    Company: [
+        { name: 'About Us', href: '/' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Insights', href: '/insights' },
+        { name: 'Contact', href: '/contact' }
+    ],
+    Legal: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/privacy' }
+    ]
 };
 
 export function Footer() {
@@ -27,9 +46,9 @@ export function Footer() {
                             <h3 className="font-semibold mb-4">{category}</h3>
                             <ul className="space-y-3">
                                 {links.map((link) => (
-                                    <li key={link}>
-                                        <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                            {link}
+                                    <li key={link.name}>
+                                        <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                                            {link.name}
                                         </Link>
                                     </li>
                                 ))}
@@ -42,8 +61,8 @@ export function Footer() {
                     <p>&copy; {new Date().getFullYear()} Mindssparc Consulting. All rights reserved.</p>
                     <div className="flex gap-6">
                         {footerLinks.Legal.map((link) => (
-                            <Link key={link} href="#" className="hover:text-white transition-colors">
-                                {link}
+                            <Link key={link.name} href={link.href} className="hover:text-white transition-colors">
+                                {link.name}
                             </Link>
                         ))}
                     </div>
