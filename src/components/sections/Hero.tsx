@@ -25,11 +25,11 @@ export function Hero() {
                             Enterprise Intelligence
                         </span>
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary mb-8 leading-tight">
-                            Clarity in <br />
-                            <span className="text-gray-400">Complexity</span>
+                            Building the <br />
+                            <span className="text-gray-400">Enterprise of Tomorrow</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-                            We help global leaders navigate uncertainty, secure their future, and unlock value through data-driven strategy.
+                            Secure, intelligent, and talent-led transformation across Cybersecurity, AI, and Recruitment.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

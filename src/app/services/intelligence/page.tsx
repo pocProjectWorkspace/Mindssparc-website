@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Brain, Cpu, Database, Network, LineChart, Lightbulb } from 'lucide-react';
+import { ServiceCTA } from "@/components/sections/ServiceCTA";
 
 const capabilities = [
     {
@@ -71,15 +72,13 @@ export default function IntelligencePage() {
                             ))}
                         </div>
 
-                        <div className="mt-24 p-12 border border-gray-200 rounded-3xl text-center bg-secondary/10">
-                            <h2 className="text-3xl font-bold text-primary mb-6">Drive Impact with Data</h2>
-                            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-                                Discover how our Intelligence practice can help you move up the analytics maturity curve.
-                            </p>
-                            <button className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 transition-colors">
-                                Explore AI Solutions
-                            </button>
-                        </div>
+                        <ServiceCTA
+                            variant="intelligence"
+                            title="Drive Impact with Data"
+                            description="Discover how our Intelligence practice can help you move up the analytics maturity curve."
+                            buttonText="Start Innovating"
+                            serviceName="Intelligence"
+                        />
                     </div>
                 </section>
             </main>

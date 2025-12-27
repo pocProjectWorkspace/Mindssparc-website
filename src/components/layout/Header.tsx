@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 
 const navigation = [
-    { name: 'Services', href: '../services' },
-    { name: 'Industries', href: '../industries' },
-    { name: 'Insights', href: '../insights' },
-    { name: 'Careers', href: '../careers' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Insights', href: '/insights' },
+    { name: 'Careers', href: '/careers' },
 ];
 
 export function Header() {
@@ -14,7 +15,7 @@ export function Header() {
             <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <div className="flex items-center">
                     <Link href="/" className="text-2xl font-bold tracking-tight text-primary">
-                        mindssparc
+                        MindsSparc
                     </Link>
                 </div>
 

@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Shield, Lock, FileKey, Eye, Server, RefreshCw } from 'lucide-react';
+import { ServiceCTA } from "@/components/sections/ServiceCTA";
 
 const features = [
     {
@@ -71,19 +72,13 @@ export default function SecurePage() {
                             ))}
                         </div>
 
-                        <div className="mt-24 p-12 bg-primary rounded-3xl text-primary-foreground text-center relative overflow-hidden">
-                            <div className="relative z-10">
-                                <h2 className="text-3xl font-bold mb-6">Ready to secure your future?</h2>
-                                <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                                    Schedule a confidential briefing with our security architects to assess your organizations resilience profile.
-                                </p>
-                                <button className="px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-colors">
-                                    Contact Security Team
-                                </button>
-                            </div>
-                            {/* Decorative background circle */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl pointer-events-none" />
-                        </div>
+                        <ServiceCTA
+                            variant="secure"
+                            title="Ready to secure your future?"
+                            description="Schedule a confidential briefing with our security architects to assess your organizations resilience profile."
+                            buttonText="Start Securing"
+                            serviceName="Secure"
+                        />
                     </div>
                 </section>
             </main>

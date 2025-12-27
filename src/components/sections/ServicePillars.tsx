@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Brain, Search, ArrowRight } from 'lucide-react';
+import { Shield, Brain, Users, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const pillars = [
@@ -18,10 +18,10 @@ const pillars = [
         href: '/services/intelligence'
     },
     {
-        icon: Search,
-        title: 'Search',
-        description: 'Uncovering hidden opportunities and market insights through deep-dive investigative research.',
-        href: '/services/search'
+        icon: Users,
+        title: 'Recruitment',
+        description: 'Building high-performing teams through trusted executive and specialist hiring.',
+        href: '/services/recruitment'
     },
 ];
 
