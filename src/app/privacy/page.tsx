@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
                             <h3 className="text-2xl font-bold text-primary mb-4">1. Introduction</h3>
                             <p className="mb-6">
-                                Mindssparc (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy and is committed to protecting your personal data.
+                                MindsSparc (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy and is committed to protecting your personal data.
                                 This privacy policy will inform you as to how we look after your personal data when you visit our website
                                 (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.
                             </p>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
 
                             <h3 className="text-2xl font-bold text-primary mb-4">6. Contact Us</h3>
                             <p className="mb-6">
-                                If you have any questions about this privacy policy or our privacy practices, please contact us at privacy@mindssparc.com.
+                                If you have any questions about this privacy policy or our privacy practices, please contact us at privacy@MindsSparc.com.
                             </p>
                         </div>
                     </div>

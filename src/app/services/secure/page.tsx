@@ -43,7 +43,7 @@ export default function SecurePage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Mindssparc SECURE"
+                    title="MindsSparc SECURE"
                     subtitle="Reveal threats before they strike."
                 />
 
@@ -52,7 +52,7 @@ export default function SecurePage() {
                         <div className="max-w-4xl mx-auto mb-16">
                             <h2 className="text-3xl font-bold text-primary mb-6">Overview</h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Cyber risk is a business risk. mindssparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.
+                                Cyber risk is a business risk. MindsSparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 We help organizations move from reactive security to proactive resilience—without compromising agility or innovation.

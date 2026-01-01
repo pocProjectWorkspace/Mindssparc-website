@@ -19,8 +19,8 @@ export default function TermsPage() {
 
                             <h3 className="text-2xl font-bold text-primary mb-4">1. Agreement to Terms</h3>
                             <p className="mb-6">
-                                These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;) and Mindssparc (&quot;we,&quot; &quot;us&quot; or &quot;our&quot;),
-                                concerning your access to and use of the Mindssparc website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the &quot;Site&quot;).
+                                These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;) and MindsSparc (&quot;we,&quot; &quot;us&quot; or &quot;our&quot;),
+                                concerning your access to and use of the MindsSparc website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the &quot;Site&quot;).
                             </p>
 
                             <h3 className="text-2xl font-bold text-primary mb-4">2. Intellectual Property Rights</h3>
@@ -47,12 +47,12 @@ export default function TermsPage() {
 
                             <h3 className="text-2xl font-bold text-primary mb-4">5. Governing Law</h3>
                             <p className="mb-6">
-                                These Terms shall be governed by and defined following the laws of the United States. Mindssparc and yourself irrevocably consent that the courts of the United States shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+                                These Terms shall be governed by and defined following the laws of the United States. MindsSparc and yourself irrevocably consent that the courts of the United States shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
                             </p>
 
                             <h3 className="text-2xl font-bold text-primary mb-4">6. Contact Us</h3>
                             <p className="mb-6">
-                                In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at legal@mindssparc.com.
+                                In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at legal@MindsSparc.com.
                             </p>
                         </div>
                     </div>

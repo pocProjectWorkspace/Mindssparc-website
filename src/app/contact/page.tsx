@@ -19,7 +19,7 @@ export default function ContactPage() {
                                 <h2 className="text-3xl font-bold text-primary mb-4">Send us a message</h2>
                                 <p className="text-gray-600">
                                     Fill out the form below and we will get back to you within 1-2 business days.
-                                    Or email us directly at <a href="mailto:contact@mindssparc.com" className="text-primary font-semibold hover:underline">contact@mindssparc.com</a>.
+                                    Or email us directly at <a href="mailto:contact@MindsSparc.com" className="text-primary font-semibold hover:underline">contact@MindsSparc.com</a>.
                                 </p>
                             </div>
 

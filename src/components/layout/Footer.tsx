@@ -33,7 +33,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                     <div className="lg:col-span-2">
                         <Link href="/" className="text-2xl font-bold tracking-tight mb-6 block">
-                            mindssparc
+                            MindsSparc
                         </Link>
                         <p className="text-gray-400 max-w-sm mb-6">
                             Empowering enterprises with strategic insights and digital innovation.
@@ -58,7 +58,7 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} Mindssparc Consulting. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} MindsSparc Consulting. All rights reserved.</p>
                     <div className="flex gap-6">
                         {footerLinks.Legal.map((link) => (
                             <Link key={link.name} href={link.href} className="hover:text-white transition-colors">

@@ -38,7 +38,7 @@ export default function RecruitmentPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Mindssparc SEARCH"
+                    title="MindsSparc SEARCH"
                     subtitle="Reliable talent solutions."
                 />
 
@@ -47,7 +47,7 @@ export default function RecruitmentPage() {
                         <div className="max-w-4xl mx-auto mb-16">
                             <h2 className="text-3xl font-bold text-primary mb-6">Overview</h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Talent is the foundation of transformation. mindssparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.
+                                Talent is the foundation of transformation. MindsSparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 We combine market insight, rigorous evaluation, and long-term partnership to deliver talent solutions you can trust.

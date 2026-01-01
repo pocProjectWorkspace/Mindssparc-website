@@ -14,25 +14,25 @@ Value Proposition
 
 A Consulting Partner You Can Trust
 
-At mindssparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
+At MindsSparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
 
 Our Focus Areas
-Mindssparc SECURE
+MindsSparc SECURE
 
 Reveal threats before they strike.
 Proactive cybersecurity strategies designed to protect critical assets, reduce risk, and build long-term resilience.
 
-Mindssparc INTELLIGENCE
+MindsSparc INTELLIGENCE
 
 Power the future of business.
 AI-driven solutions that enable smarter decisions, intelligent automation, and sustainable competitive advantage.
 
-Mindssparc SEARCH
+MindsSparc SEARCH
 
 Reliable talent solutions.
 Executive and technology hiring that helps organizations build high-performing teams with confidence.
 
-Why mindssparc
+Why MindsSparc
 
 Consulting-led, not product-driven
 
@@ -72,7 +72,7 @@ Let’s build what’s next—securely and intelligently.
 2. ABOUT US PAGE
 Who We Are
 
-mindssparc is a consulting firm dedicated to helping organizations navigate complexity and accelerate transformation through secure, intelligent, and industry-aware solutions.
+MindsSparc is a consulting firm dedicated to helping organizations navigate complexity and accelerate transformation through secure, intelligent, and industry-aware solutions.
 
 Our Vision
 
@@ -102,14 +102,14 @@ We operate at the intersection of security, intelligence, and talent, enabling o
 
 Our services are structured across three integrated verticals.
 
-4. MINDSsPARC SECURE (Cybersecurity)
+4. MindsSparc SECURE (Cybersecurity)
 Hero
 
 Reveal threats before they strike.
 
 Overview
 
-Cyber risk is a business risk. mindssparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.
+Cyber risk is a business risk. MindsSparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.
 
 What We Do
 
@@ -131,14 +131,14 @@ We help organizations move from reactive security to proactive resilience—with
 
 CTA: Schedule a Security Assessment
 
-5. MINDSsPARC INTELLIGENCE (AI & Data)
+5. MindsSparc INTELLIGENCE (AI & Data)
 Hero
 
 Power the future of business.
 
 Overview
 
-Artificial intelligence is transforming how organizations operate, compete, and grow. mindssparc INTELLIGENCE enables enterprises to adopt AI responsibly, securely, and at scale.
+Artificial intelligence is transforming how organizations operate, compete, and grow. MindsSparc INTELLIGENCE enables enterprises to adopt AI responsibly, securely, and at scale.
 
 What We Do
 
@@ -158,14 +158,14 @@ Our Value
 
 We focus on AI that delivers real business value—grounded in governance, trust, and enterprise readiness.
 
-6. MINDSsPARC SEARCH (Recruitment Services)
+6. MindsSparc SEARCH (Recruitment Services)
 Hero
 
 Reliable talent solutions.
 
 Overview
 
-Talent is the foundation of transformation. mindssparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.
+Talent is the foundation of transformation. MindsSparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.
 
 What We Do
 
@@ -198,13 +198,13 @@ Explore our latest thinking on cybersecurity, artificial intelligence, talent, a
 Our insights are designed to inform decision-making and spark meaningful conversations.
 
 9. CAREERS PAGE
-Careers at mindssparc
+Careers at MindsSparc
 
 Build a career where your work shapes the future of enterprise.
 
 We are always looking for curious, driven professionals who value integrity, collaboration, and impact.
 
-Life at mindssparc
+Life at MindsSparc
 
 Consulting-led culture
 

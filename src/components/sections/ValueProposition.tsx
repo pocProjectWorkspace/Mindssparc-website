@@ -42,7 +42,7 @@ export function ValueProposition() {
                             <span className="text-accent">You Can Trust</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-xl">
-                            At mindssparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
+                            At MindsSparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
                         </p>
 
                         <ul className="space-y-4">

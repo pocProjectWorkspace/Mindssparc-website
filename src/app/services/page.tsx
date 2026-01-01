@@ -7,7 +7,7 @@ const services = [
     {
         icon: Shield,
         title: 'MindsSparc SECURE',
-        description: 'Cyber risk is a business risk. mindssparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.',
+        description: 'Cyber risk is a business risk. MindsSparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.',
         capabilities: [
             'Cybersecurity Strategy & Advisory',
             'Threat Detection & Incident Response',
@@ -29,7 +29,7 @@ const services = [
     {
         icon: Users,
         title: 'MindsSparc SEARCH',
-        description: 'Talent is the foundation of transformation. mindssparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.',
+        description: 'Talent is the foundation of transformation. MindsSparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.',
         capabilities: [
             'Executive Search',
             'Technology & Digital Hiring',

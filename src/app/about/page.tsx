@@ -8,8 +8,8 @@ export default function AboutPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="About Mindssparc"
-                    subtitle="mindssparc is a consulting firm dedicated to helping organizations navigate complexity and accelerate transformation through secure, intelligent, and industry-aware solutions."
+                    title="About MindsSparc"
+                    subtitle="MindsSparc is a consulting firm dedicated to helping organizations navigate complexity and accelerate transformation through secure, intelligent, and industry-aware solutions."
                 />
 
                 {/* Mission & Vision */}

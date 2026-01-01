@@ -7,7 +7,7 @@ import { CookieConsent } from '@/components/ui/CookieConsent';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Mindssparc | Enterprise Consulting',
+  title: 'MindsSparc | Enterprise Consulting',
   description: 'Global strategic consulting firm specializing in security, intelligence, and search.',
 };
 

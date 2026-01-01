@@ -9,7 +9,7 @@ export function CookieConsent() {
 
     useEffect(() => {
         // Check if user has already made a choice
-        const consent = localStorage.getItem('mindssparc-cookie-consent');
+        const consent = localStorage.getItem('MindsSparc-cookie-consent');
         if (!consent) {
             // Show banner after a short delay
             const timer = setTimeout(() => setIsVisible(true), 1000);
@@ -18,12 +18,12 @@ export function CookieConsent() {
     }, []);
 
     const handleAccept = () => {
-        localStorage.setItem('mindssparc-cookie-consent', 'accepted');
+        localStorage.setItem('MindsSparc-cookie-consent', 'accepted');
         setIsVisible(false);
     };
 
     const handleDecline = () => {
-        localStorage.setItem('mindssparc-cookie-consent', 'declined');
+        localStorage.setItem('MindsSparc-cookie-consent', 'declined');
         setIsVisible(false);
     };
 

@@ -18,7 +18,7 @@ export default function Home() {
                 <section className="py-16 bg-white">
                     <div className="container mx-auto px-6 text-center">
                         <span className="inline-block py-1 px-3 rounded-full bg-secondary text-primary text-sm font-semibold mb-4">
-                            Why Mindssparc
+                            Why MindsSparc
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                             Driving the future of business

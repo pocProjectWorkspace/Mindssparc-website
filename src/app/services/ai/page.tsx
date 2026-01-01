@@ -47,7 +47,7 @@ export default function AiServicesPage() {
                         <div className="max-w-4xl mx-auto mb-16 text-center">
                             <h2 className="text-3xl font-bold text-primary mb-6">Unlocking the Power of AI</h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                At Mindssparc, we help you navigate the complex landscape of Artificial Intelligence.
+                                At MindsSparc, we help you navigate the complex landscape of Artificial Intelligence.
                                 From modernizing your legacy applications to ensuring strict governance and compliance,
                                 our comprehensive suite of AI services is designed to drive innovation and tangible business outcomes.
                             </p>
