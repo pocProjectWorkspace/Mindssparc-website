@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { NeuralBackground } from '@/components/ui/NeuralBackground';
 
 export function Hero() {
@@ -33,13 +34,13 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <button className="group px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+                            <Link href="/contact" className="group px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
                                 Talk to an Expert
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                            <button className="px-8 py-4 text-primary font-semibold hover:text-primary/80 transition-colors bg-white/50 backdrop-blur-sm rounded-full border border-gray-200">
+                            </Link>
+                            <Link href="/services" className="px-8 py-4 text-primary font-semibold hover:text-primary/80 transition-colors bg-white/50 backdrop-blur-sm rounded-full border border-gray-200">
                                 Explore Our Services
-                            </button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
