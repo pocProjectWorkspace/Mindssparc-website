@@ -49,7 +49,7 @@ export default function AiCoePage() {
                             </p>
 
                             <div className="mt-8">
-                                <Link href="/services/ai/coe/ai-garage" className="inline-flex items-center px-6 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-colors shadow-md">
+                                <Link href="/services/intelligence/coe/ai-garage" className="inline-flex items-center px-6 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-colors shadow-md">
                                     <span className="mr-2">Explore the AI Garage Methodology</span>
                                 </Link>
                             </div>

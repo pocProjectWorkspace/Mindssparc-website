@@ -10,25 +10,25 @@ const offerings = [
         icon: Database,
         title: 'Data Migration',
         description: 'Seamlessly migrate your data to modern platforms, ensuring integrity, security, and accessibility for AI applications.',
-        href: '/services/ai/app-modernization/data-migration'
+        href: '/services/intelligence/app-modernization/data-migration'
     },
     {
         icon: Cloud,
         title: 'Cloud Migration',
         description: 'Move your infrastructure to the cloud to leverage scalable compute and storage resources essential for AI workloads.',
-        href: '/services/ai/app-modernization/cloud-migration'
+        href: '/services/intelligence/app-modernization/cloud-migration'
     },
     {
         icon: RefreshCw,
         title: 'AI Modernization',
         description: 'Refactor and optimize your existing applications to infuse AI capabilities and improve performance.',
-        href: '/services/ai/app-modernization/ai-modernization'
+        href: '/services/intelligence/app-modernization/ai-modernization'
     },
     {
         icon: Layers,
         title: 'Complete System Migration',
         description: 'End-to-end migration services to transition your entire legacy ecosystem to a modern, AI-ready architecture.',
-        href: '/services/ai/app-modernization/complete-system-migration'
+        href: '/services/intelligence/app-modernization/complete-system-migration'
     }
 ];
 

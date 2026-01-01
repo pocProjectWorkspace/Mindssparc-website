@@ -10,37 +10,37 @@ const industries = [
         icon: Globe2,
         title: 'Global Capability Centers (GCC)',
         description: 'Establish your own offshore center with our Build-Operate-Transform (BOT) model for cost-effective scaling.',
-        href: '/services/ai/industries/gcc'
+        href: '/services/intelligence/industries/gcc'
     },
     {
         icon: Car,
         title: 'Automotive',
         description: 'Drive innovation in the automotive sector with AI solutions for autonomous driving assistance, predictive maintenance, and supply chain optimization.',
-        href: '/services/ai/industries/automotive'
+        href: '/services/intelligence/industries/automotive'
     },
     {
         icon: Stethoscope,
         title: 'Healthcare',
         description: 'Transform patient care with AI-powered diagnostics, personalized treatment plans, and efficient hospital management systems.',
-        href: '/services/ai/industries/healthcare'
+        href: '/services/intelligence/industries/healthcare'
     },
     {
         icon: GraduationCap,
         title: 'Education',
         description: 'Personalize learning experiences and streamline administrative tasks with intelligent educational technologies.',
-        href: '/services/ai/industries/education'
+        href: '/services/intelligence/industries/education'
     },
     {
         icon: Factory,
         title: 'Manufacturing',
         description: 'Optimize production lines, ensure quality control, and predict equipment failures with industrial AI applications.',
-        href: '/services/ai/industries/manufacturing'
+        href: '/services/intelligence/industries/manufacturing'
     },
     {
         icon: ShoppingBag,
         title: 'Retail',
         description: 'Enhance customer engagement, optimize inventory management, and drive sales through personalized AI recommendations.',
-        href: '/services/ai/industries/retail'
+        href: '/services/intelligence/industries/retail'
     }
 ];
 

@@ -4,7 +4,7 @@ const footerLinks = {
     Services: [
         { name: 'Secure', href: '/services/secure' },
         { name: 'Intelligence', href: '/services/intelligence' },
-        { name: 'Recruitment', href: '/services/recruitment' },
+        { name: 'Talent', href: '/services/recruitment' },
         { name: 'All Services', href: '/services' }
     ],
     Industries: [

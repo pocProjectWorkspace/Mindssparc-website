@@ -10,19 +10,19 @@ const offerings = [
         icon: FileText,
         title: 'AI Advisory',
         description: 'Strategic guidance on AI adoption, tailored to your organizational goals and risk appetite. (Featuring insights from Sutharsan\'s whitepaper)',
-        href: '/services/ai/governance/ai-advisory'
+        href: '/services/intelligence/governance/ai-advisory'
     },
     {
         icon: ShieldAlert,
         title: 'Governance Tools',
         description: 'Implement robust tools and frameworks to monitor, audit, and manage AI models throughout their lifecycle.',
-        href: '/services/ai/governance/governance-tools'
+        href: '/services/intelligence/governance/governance-tools'
     },
     {
         icon: Scale,
         title: 'AI COE',
         description: 'Establish a Center of Excellence to standardize AI practices, ensure compliance, and drive ethical AI adoption across the organization.',
-        href: '/services/ai/governance/ai-coe'
+        href: '/services/intelligence/governance/ai-coe'
     }
 ];
 

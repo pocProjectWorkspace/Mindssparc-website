@@ -15,11 +15,11 @@ const pillars = [
         icon: Brain,
         title: 'INTELLIGENCE',
         description: 'Power the future of business. AI-driven solutions that enable smarter decisions, intelligent automation, and sustainable competitive advantage.',
-        href: '/services/ai'
+        href: '/services/intelligence'
     },
     {
         icon: Users,
-        title: 'SEARCH',
+        title: 'TALENT',
         description: 'Reliable talent solutions. Executive and technology hiring that helps organizations build high-performing teams with confidence.',
         href: '/services/recruitment'
     },
