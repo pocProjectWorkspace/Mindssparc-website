@@ -18,8 +18,8 @@ export default function IndustriesPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Industries"
-                    subtitle="Deep sector expertise to solve specific challenges in your industry."
+                    title="Industry Expertise"
+                    subtitle="Every industry faces unique challenges. Our consultants bring deep sector knowledge combined with cross-industry insight to deliver relevant, practical solutions."
                 />
 
                 <section className="py-24 bg-secondary">

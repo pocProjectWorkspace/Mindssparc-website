@@ -15,8 +15,8 @@ export default function InsightsPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Insights Hub"
-                    subtitle="Thought leadership and analysis on the trends shaping the future of business."
+                    title="Insights & Perspectives"
+                    subtitle="Explore our latest thinking on cybersecurity, artificial intelligence, talent, and enterprise transformation."
                 />
 
                 <section className="py-24 bg-white">

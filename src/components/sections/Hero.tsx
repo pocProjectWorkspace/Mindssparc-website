@@ -28,17 +28,17 @@ export function Hero() {
                             Building the <br />
                             <span className="text-gray-400">Enterprise of Tomorrow</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Secure, intelligent, and talent-led transformation across Cybersecurity, AI, and Recruitment.
+                        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                            Trusted consulting across cybersecurity, artificial intelligence, and talent—delivering secure, intelligent, and measurable outcomes for modern organizations.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <button className="group px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
-                                Explore Services
+                                Talk to an Expert
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </button>
                             <button className="px-8 py-4 text-primary font-semibold hover:text-primary/80 transition-colors bg-white/50 backdrop-blur-sm rounded-full border border-gray-200">
-                                View Case Studies
+                                Explore Our Services
                             </button>
                         </div>
                     </motion.div>

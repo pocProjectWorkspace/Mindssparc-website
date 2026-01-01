@@ -6,18 +6,18 @@ import { Shield, Brain, Users, CheckCircle } from 'lucide-react';
 const services = [
     {
         icon: Shield,
-        title: 'Secure',
-        description: 'Fortifying enterprise resilience through proactive risk management and cybersecurity strategy.',
+        title: 'MindsSparc SECURE',
+        description: 'Cyber risk is a business risk. mindssparc SECURE helps organizations anticipate threats, strengthen defenses, and embed security into the core of their operations.',
         capabilities: [
-            'Enterprise Security Architecture',
-            'Zero Trust Implementation',
-            'Threat Detection & Response',
-            'Compliance & Governance'
+            'Cybersecurity Strategy & Advisory',
+            'Threat Detection & Incident Response',
+            'Cloud & Infrastructure Security',
+            'Identity & Access Management'
         ]
     },
     {
         icon: Brain,
-        title: 'Intelligence',
+        title: 'MindsSparc INTELLIGENCE',
         description: 'Transforming raw data into actionable foresight with advanced analytics and AI integration.',
         capabilities: [
             'Artificial Intelligence & Generative AI',
@@ -28,13 +28,13 @@ const services = [
     },
     {
         icon: Users,
-        title: 'Recruitment',
-        description: 'Building high-performing teams with executive search, technology hiring, and flexible staffing—aligned to your transformation priorities.',
+        title: 'MindsSparc SEARCH',
+        description: 'Talent is the foundation of transformation. mindssparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.',
         capabilities: [
             'Executive Search',
             'Technology & Digital Hiring',
-            'Specialist Staffing (Cyber, AI, Data)',
-            'Leadership Assessment'
+            'Contract & Project Staffing',
+            'Workforce Planning'
         ]
     }
 ];
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <main className="flex-grow">
                 <PageHeader
                     title="Our Services"
-                    subtitle="Comprehensive consulting solutions designed to drive value and sustainable growth."
+                    subtitle="We operate at the intersection of security, intelligence, and talent, enabling organizations to build resilient, future-ready enterprises."
                 />
 
                 <section className="py-24 bg-white">

@@ -8,8 +8,8 @@ export default function ContactPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Contact Us"
-                    subtitle="Get in touch with our team to discuss your strategic needs."
+                    title="Let’s Talk"
+                    subtitle="Whether you’re exploring a new initiative or navigating a complex challenge, we’re here to help."
                 />
 
                 <section className="py-24 bg-white">

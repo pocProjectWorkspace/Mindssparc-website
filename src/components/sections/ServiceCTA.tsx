@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ConsultationModal } from '@/components/ui/ConsultationModal';
 
 interface ServiceCTAProps {
-    variant: 'secure' | 'intelligence' | 'recruitment';
+    variant: 'secure' | 'intelligence' | 'recruitment' | 'ai' | 'default';
     title: string;
     description: string;
     buttonText: string;
@@ -37,7 +37,7 @@ export function ServiceCTA({ variant, title, description, buttonText, serviceNam
                 </div>
             )}
 
-            {variant === 'intelligence' && (
+            {(variant === 'intelligence' || variant === 'ai' || variant === 'default') && (
                 <div className="mt-24 p-12 border border-gray-200 rounded-3xl text-center bg-secondary/10">
                     <h2 className="text-3xl font-bold text-primary mb-6">{title}</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">

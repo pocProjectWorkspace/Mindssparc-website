@@ -16,24 +16,19 @@ const services = [
         description: 'Specialized recruitment for high-demand technical roles in software engineering, cloud architecture, and digital product management.'
     },
     {
-        icon: ShieldCheck,
-        title: 'Cyber & AI Specialists',
-        description: 'Targeted sourcing of niche talent in cybersecurity, artificial intelligence, and data science—where expertise is scarce and critical.'
+        icon: Briefcase,
+        title: 'Contract & Project Staffing',
+        description: 'Flexible staffing solutions to scale your workforce on demand for critical projects and initiatives.'
     },
     {
         icon: Target,
-        title: 'Leadership Assessment',
-        description: 'Rigorous evaluation of leadership potential using psychometric testing, behavioral interviewing, and cultural fit analysis.'
+        title: 'Workforce Planning',
+        description: 'Strategic analysis and planning to ensure your organization has the right talent mix for future goals.'
     },
     {
-        icon: Globe,
-        title: 'Global Expansion Teams',
-        description: 'Building complete local teams for international expansion, ensuring compliance and cultural alignment in new markets.'
-    },
-    {
-        icon: Briefcase,
-        title: 'Interim Management',
-        description: 'Rapid deployment of experienced interim leaders to manage crisis, transformation, or gap coverage.'
+        icon: ShieldCheck,
+        title: 'Talent Advisory',
+        description: 'Expert guidance on talent strategy, employer branding, and retention to build a world-class culture.'
     }
 ];
 
@@ -43,18 +38,19 @@ export default function RecruitmentPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="Recruitment Services"
-                    subtitle="Building high-performing teams for the secure, intelligent enterprise."
+                    title="Mindssparc SEARCH"
+                    subtitle="Reliable talent solutions."
                 />
 
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto mb-16">
-                            <h2 className="text-3xl font-bold text-primary mb-6">Talent is Strategy</h2>
+                            <h2 className="text-3xl font-bold text-primary mb-6">Overview</h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Talent is the foundation of transformation. mindssparc SEARCH helps organizations identify, attract, and retain the leaders and specialists who drive change.
+                            </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                True transformation requires more than just technology; it demands the right people to drive it.
-                                Our Recruitment practice connects you with the visionary leaders and technical experts needed to secure your future and innovate at scale.
-                                We don't just fill roles; we build the human foundation of your enterprise.
+                                We combine market insight, rigorous evaluation, and long-term partnership to deliver talent solutions you can trust.
                             </p>
                         </div>
 

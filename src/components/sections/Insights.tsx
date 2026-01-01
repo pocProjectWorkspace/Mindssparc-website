@@ -2,24 +2,29 @@
 
 import { ArrowRight } from 'lucide-react';
 
+import Image from 'next/image';
+
 const insights = [
     {
         category: 'Cybersecurity',
         title: 'The Zero Trust Imperative in 2026',
         date: 'Oct 12, 2025',
-        readTime: '5 min read'
+        readTime: '5 min read',
+        image: '/images/zero-trust.png'
     },
     {
         category: 'AI Strategy',
         title: 'Generative AI: Moving Beyond the Hype',
         date: 'Sep 28, 2025',
-        readTime: '8 min read'
+        readTime: '8 min read',
+        image: '/images/gen-ai.png'
     },
     {
         category: 'Market Intelligence',
         title: 'Emerging Markets Outlook Q4',
         date: 'Sep 15, 2025',
-        readTime: '12 min read'
+        readTime: '12 min read',
+        image: '/images/market-intel.png'
     }
 ];
 
@@ -29,8 +34,11 @@ export function Insights() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">Thought Leadership</span>
-                        <h2 className="text-4xl font-bold text-primary">Latest Perspectives</h2>
+                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">Insights</span>
+                        <h2 className="text-4xl font-bold text-primary">Ideas that shape decisions.</h2>
+                        <p className="text-gray-600 mt-4 max-w-xl">
+                            Explore our perspectives on cybersecurity, AI, talent, and enterprise transformation.
+                        </p>
                     </div>
                     <button className="text-primary font-semibold hover:text-accent transition-colors flex items-center gap-2">
                         View all insights <ArrowRight className="w-4 h-4" />
@@ -40,9 +48,13 @@ export function Insights() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {insights.map((insight) => (
                         <article key={insight.title} className="group cursor-pointer">
-                            <div className="aspect-[16/9] bg-gray-100 mb-6 overflow-hidden rounded-lg">
-                                {/* Placeholder for insight image */}
-                                <div className="w-full h-full bg-gray-200 group-hover:scale-105 transition-transform duration-500" />
+                            <div className="aspect-[16/9] bg-gray-100 mb-6 overflow-hidden rounded-lg relative">
+                                <Image
+                                    src={insight.image}
+                                    alt={insight.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
                             </div>
                             <div className="flex items-center gap-4 text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">
                                 <span className="text-accent">{insight.category}</span>

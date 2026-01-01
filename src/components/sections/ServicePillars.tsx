@@ -7,20 +7,20 @@ import Link from 'next/link';
 const pillars = [
     {
         icon: Shield,
-        title: 'Secure',
-        description: 'Fortifying enterprise resilience through proactive risk management and cybersecurity strategy.',
+        title: 'MindsSparc SECURE',
+        description: 'Reveal threats before they strike. Proactive cybersecurity strategies designed to protect critical assets, reduce risk, and build long-term resilience.',
         href: '/services/secure'
     },
     {
         icon: Brain,
-        title: 'Intelligence',
-        description: 'Transforming raw data into actionable foresight with advanced analytics and AI integration.',
-        href: '/services/intelligence'
+        title: 'MindsSparc INTELLIGENCE',
+        description: 'Power the future of business. AI-driven solutions that enable smarter decisions, intelligent automation, and sustainable competitive advantage.',
+        href: '/services/ai'
     },
     {
         icon: Users,
-        title: 'Recruitment',
-        description: 'Building high-performing teams through trusted executive and specialist hiring.',
+        title: 'MindsSparc SEARCH',
+        description: 'Reliable talent solutions. Executive and technology hiring that helps organizations build high-performing teams with confidence.',
         href: '/services/recruitment'
     },
 ];

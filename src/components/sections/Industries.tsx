@@ -1,13 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, Stethoscope, Landmark, Plane } from 'lucide-react';
+import { Building2, Stethoscope, Landmark, Plane, Globe } from 'lucide-react';
 
 const industries = [
-    { icon: Landmark, name: 'Financial Services', desc: 'Navigating regulatory complexity and digital assets.' },
-    { icon: Stethoscope, name: 'Healthcare & Life Sciences', desc: 'Accelerating innovation in patient care and biotech.' },
-    { icon: Building2, name: 'Public Sector', desc: 'Modernizing infrastructure and citizen services.' },
-    { icon: Plane, name: 'Transportation', desc: 'Optimizing logistics and global supply chains.' },
+    { icon: Landmark, name: 'Banking & Financial Services', desc: 'Secure digital transformation and compliance.' },
+    { icon: Stethoscope, name: 'Healthcare & Life Sciences', desc: 'Accelerating patient care with intelligence.' },
+    { icon: Building2, name: 'Technology & SaaS', desc: 'Scaling infrastructure and product innovation.' },
+    { icon: Plane, name: 'Manufacturing', desc: 'Optimizing supply chains and automation.' },
+    { icon: Globe, name: 'Retail & Consumer', desc: 'Enhancing customer experiences and operations.' },
+    { icon: Building2, name: 'Public Sector', desc: 'Modernizing citizen services securely.' },
 ];
 
 export function Industries() {
@@ -15,9 +17,9 @@ export function Industries() {
         <section className="py-24 bg-secondary">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Expertise Across Industries</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Industries We Serve</h2>
                     <p className="text-gray-600 text-lg">
-                        We bring deep sector-specific knowledge to solve unique challenges in the world&apos;s most critical industries.
+                        We bring deep experience across industries, adapting our expertise to each organization’s unique challenges.
                     </p>
                 </div>
 

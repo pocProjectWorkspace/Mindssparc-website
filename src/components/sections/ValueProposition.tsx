@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, TrendingUp, Users, Globe, Award } from 'lucide-react';
 
 const benefits = [
-    "Data-driven decision making frameworks",
-    "Enterprise-grade security and compliance",
-    "Global market intelligence network",
-    "Scalable digital transformation strategies"
+    "Consulting-led, not product-driven",
+    "Secure-by-design and intelligence-first approach",
+    "Industry-contextual solutions",
+    "Measurable business impact",
+    "Long-term partnership mindset"
 ];
 
 const stats = [
@@ -37,12 +38,11 @@ export function ValueProposition() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                            Bridging the gap between <br />
-                            <span className="text-accent">strategy</span> and <span className="text-green-400">execution</span>.
+                            A Consulting Partner <br />
+                            <span className="text-accent">You Can Trust</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-xl">
-                            In an era of rapid disruption, we provide the stability and foresight needed to thrive.
-                            Our consultants bring decades of experience across high-stakes industries to deliver outcomes, not just reports.
+                            At mindssparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
                         </p>
 
                         <ul className="space-y-4">
