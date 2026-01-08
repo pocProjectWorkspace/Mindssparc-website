@@ -38,7 +38,7 @@ export default function RecruitmentPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="MindsSparc SEARCH"
+                    title="TALENT"
                     subtitle="Reliable talent solutions."
                 />
 

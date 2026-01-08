@@ -38,7 +38,7 @@ export default function AiServicesPage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="AI Services"
+                    title="INTELLIGENCE"
                     subtitle="Empowering your enterprise with the next generation of intelligent solutions."
                 />
 

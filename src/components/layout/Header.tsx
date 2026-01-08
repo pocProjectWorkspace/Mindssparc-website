@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu } from 'lucide-react';
 
 const navigation = [
@@ -11,11 +12,19 @@ const navigation = [
 
 export function Header() {
     return (
-        <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <header className="fixed w-full bg-primary/95 backdrop-blur-md z-50 border-b border-white/10">
             <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <div className="flex items-center">
-                    <Link href="/" className="text-2xl font-bold tracking-tight text-primary">
-                        MindsSparc
+                    <Link href="/" className="flex items-center">
+                        <div className="relative h-8 w-auto aspect-[180/40]">
+                            <Image
+                                src="/logos/MindsSparc Logo Light.png"
+                                alt="MindsSparc"
+                                fill
+                                className="object-contain object-left"
+                                priority
+                            />
+                        </div>
                     </Link>
                 </div>
 
@@ -25,14 +34,14 @@ export function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                            className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
                         >
                             {item.name}
                         </Link>
                     ))}
                     <Link
                         href="/contact"
-                        className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:bg-primary/90 transition-colors"
+                        className="px-5 py-2.5 bg-white text-primary text-sm font-medium rounded-full hover:bg-gray-100 transition-colors"
                     >
                         Contact Us
                     </Link>
@@ -40,7 +49,7 @@ export function Header() {
 
                 {/* Mobile menu button (placeholder functionality) */}
                 <div className="md:hidden">
-                    <button className="p-2 text-gray-600">
+                    <button className="p-2 text-gray-300 hover:text-white">
                         <Menu className="w-6 h-6" />
                     </button>
                 </div>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHeader } from "@/components/layout/PageHeader";
+import { Leadership } from "@/components/sections/Leadership";
 
 export default function AboutPage() {
     return (
@@ -39,6 +40,9 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Team Section */}
+                <Leadership />
 
                 {/* Our Approach */}
                 <section className="py-24 bg-secondary">

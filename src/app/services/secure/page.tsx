@@ -43,7 +43,7 @@ export default function SecurePage() {
             <Header />
             <main className="flex-grow">
                 <PageHeader
-                    title="MindsSparc SECURE"
+                    title="SECURE"
                     subtitle="Reveal threats before they strike."
                 />
 

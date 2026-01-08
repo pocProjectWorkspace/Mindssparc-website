@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerLinks = {
     Services: [
@@ -32,8 +33,15 @@ export function Footer() {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                     <div className="lg:col-span-2">
-                        <Link href="/" className="text-2xl font-bold tracking-tight mb-6 block">
-                            MindsSparc
+                        <Link href="/" className="inline-block mb-6">
+                            <div className="relative h-8 w-auto aspect-[180/40]">
+                                <Image
+                                    src="/logos/MindsSparc Logo Light.png"
+                                    alt="MindsSparc"
+                                    fill
+                                    className="object-contain object-left"
+                                />
+                            </div>
                         </Link>
                         <p className="text-gray-400 max-w-sm mb-6">
                             Empowering enterprises with strategic insights and digital innovation.
