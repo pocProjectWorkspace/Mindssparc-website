@@ -29,14 +29,14 @@ const footerLinks = {
 
 export function Footer() {
     return (
-        <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+        <footer className="bg-gray-950 text-primary-foreground pt-16 pb-8">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
                             <div className="relative h-32 w-auto aspect-[180/40]">
                                 <Image
-                                    src="/logos/MindsSparc Logo.png"
+                                    src="/logos/MindsSparc_Logo_Dark.png"
                                     alt="MindsSparc"
                                     fill
                                     className="object-contain object-left"
