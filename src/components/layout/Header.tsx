@@ -13,12 +13,12 @@ const navigation = [
 export function Header() {
     return (
         <header className="fixed w-full bg-primary/95 backdrop-blur-md z-50 border-b border-white/10">
-            <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
+            <nav className="container mx-auto px-6 h-32 flex items-center justify-between">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center">
-                        <div className="relative h-8 w-auto aspect-[180/40]">
+                        <div className="relative h-28 w-auto aspect-[180/40]">
                             <Image
-                                src="/logos/MindsSparc Logo Light.png"
+                                src="/logos/MindsSparc Logo.png"
                                 alt="MindsSparc"
                                 fill
                                 className="object-contain object-left"

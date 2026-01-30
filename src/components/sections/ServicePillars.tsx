@@ -1,56 +1,130 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { Shield, Brain, Users, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { MouseEvent } from 'react';
 
 const pillars = [
     {
         icon: Shield,
-        title: 'SECURE',
-        description: 'Reveal threats before they strike. Proactive cybersecurity strategies designed to protect critical assets, reduce risk, and build long-term resilience.',
-        href: '/services/secure'
+        title: 'MindsSparc Secure',
+        headline: 'Reveal threats \nbefore they strike',
+        description: 'Continuous external exposure discovery, validation, and remediation verification, powered by CyberMindr.',
+        href: '/services/secure',
+        cta: 'Explore Secure',
+        image: '/images/services/secure-card.png'
     },
     {
         icon: Brain,
-        title: 'INTELLIGENCE',
-        description: 'Power the future of business. AI-driven solutions that enable smarter decisions, intelligent automation, and sustainable competitive advantage.',
-        href: '/services/intelligence'
+        title: 'MindsSparc Intelligence',
+        headline: 'Power the future \nof business',
+        description: 'AI-driven solutions that enable smarter decisions, intelligent automations and sustainable competitive advantage.',
+        href: '/services/intelligence',
+        cta: 'Explore Intelligence',
+        image: '/images/services/intelligence-card.png'
     },
     {
         icon: Users,
-        title: 'TALENT',
-        description: 'Reliable talent solutions. Executive and technology hiring that helps organizations build high-performing teams with confidence.',
-        href: '/services/recruitment'
+        title: 'MindsSparc Talent',
+        headline: 'Teams that deliver, \nnot just resumes.',
+        description: 'Access a proactive pipeline and end-to-end hiring engine to build high performing teams, powered by Next Gen models.',
+        href: '/services/recruitment',
+        cta: 'Explore Talent',
+        image: '/images/services/talent-card.png'
     },
 ];
 
+function SpotlightCard({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        mouseX.set(clientX - left);
+        mouseY.set(clientY - top);
+    }
+
+    return (
+        <div
+            className={`group relative border border-white/10 bg-gray-900/50 overflow-hidden rounded-xl ${className}`}
+            onMouseMove={handleMouseMove}
+        >
+            <motion.div
+                className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+                style={{
+                    background: useMotionTemplate`
+            radial-gradient(
+              650px circle at ${mouseX}px ${mouseY}px,
+              rgba(255,255,255,0.1),
+              transparent 80%
+            )
+          `,
+                }}
+            />
+            <div className="relative h-full">{children}</div>
+        </div>
+    );
+}
+
 export function ServicePillars() {
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <section className="py-24 bg-gray-950 relative overflow-hidden">
+            {/* Background Texture/Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900/50 to-gray-950 pointer-events-none" />
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {pillars.map((pillar, index) => (
                         <Link key={pillar.title} href={pillar.href} className="block h-full">
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.2, duration: 0.6 }}
                                 viewport={{ once: true }}
-                                className="group p-8 border border-gray-100 rounded-2xl hover:border-gray-200 hover:shadow-lg transition-all duration-300 bg-secondary/30 h-full flex flex-col"
+                                transition={{ delay: index * 0.15, duration: 0.6 }}
+                                className="h-full"
                             >
-                                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <pillar.icon className="w-6 h-6 text-accent" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-primary mb-4">{pillar.title}</h3>
-                                <p className="text-gray-600 leading-relaxed flex-grow">
-                                    {pillar.description}
-                                </p>
-                                <div className="mt-6 pt-6 border-t border-gray-100">
-                                    <span className="text-sm font-semibold text-primary group-hover:text-accent transition-colors cursor-pointer flex items-center gap-2">
-                                        Learn more <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                    </span>
-                                </div>
+                                <SpotlightCard className="h-full flex flex-col hover:shadow-2xl hover:shadow-primary/10 transition-shadow duration-500">
+                                    {/* Image Section */}
+                                    <div className="relative h-56 w-full overflow-hidden border-b border-white/5">
+                                        {/* Image Fallback Gradient */}
+                                        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 z-0" />
+
+                                        <Image
+                                            src={pillar.image}
+                                            alt={pillar.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105 z-10 opacity-90 group-hover:opacity-100"
+                                        />
+
+                                        {/* Overlay for icon readability */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-20" />
+
+                                        <div className="absolute top-4 left-4 z-30 w-10 h-10 bg-black/40 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/10 group-hover:border-white/30 transition-colors">
+                                            <pillar.icon className="w-5 h-5 text-white/90" />
+                                        </div>
+                                    </div>
+
+                                    {/* Content Section */}
+                                    <div className="p-8 flex flex-col flex-grow">
+                                        <h3 className="text-sm font-extrabold text-blue-400 mb-3 uppercase tracking-wider">{pillar.title}</h3>
+                                        {/* Added text-balance and slightly adjusted size/leading */}
+                                        <h4 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug whitespace-pre-line group-hover:text-blue-200 transition-colors">
+                                            {pillar.headline}
+                                        </h4>
+                                        <p className="text-gray-400 text-sm leading-relaxed flex-grow mb-8 group-hover:text-gray-300 transition-colors">
+                                            {pillar.description}
+                                        </p>
+
+                                        <div className="mt-auto">
+                                            <span className="text-sm font-semibold text-white group-hover:text-blue-200 transition-colors flex items-center gap-2">
+                                                {pillar.cta}
+                                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </SpotlightCard>
                             </motion.div>
                         </Link>
                     ))}

@@ -3,43 +3,49 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { NeuralBackground } from '@/components/ui/NeuralBackground';
+import Image from 'next/image';
 
 export function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-secondary/30 pt-20">
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gray-950 pt-20">
 
-            {/* Animated Background */}
-            <NeuralBackground />
+            {/* Background Image - Full Screen */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/hero/hero-bg.png"
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                {/* Gradient Overlay for Text Readability - Darker on the left */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/60 to-gray-950/30" />
+            </div>
 
-            {/* Overlay gradient for text readability if needed, though canvas is subtle */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/50 pointer-events-none" />
-
-            <div className="container mx-auto px-6 relative z-10 pointer-events-none">
-                <div className="max-w-4xl mx-auto text-center pointer-events-auto"> {/* Enable pointer events for content */}
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-3xl">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6 backdrop-blur-sm">
-                            Enterprise Intelligence
-                        </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary mb-8 leading-tight">
-                            Building the <br />
-                            <span className="text-gray-400">Enterprise of Tomorrow</span>
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                            Build what’s next <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                                Together
+                            </span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                            Trusted consulting across cybersecurity, artificial intelligence, and talent—delivering secure, intelligent, and measurable outcomes for modern organizations.
+                        <p className="text-xl text-gray-200 mb-10 max-w-xl leading-relaxed">
+                            Trusted consulting across cybersecurity, artificial intelligence, and talent – reduce risks, deliver measurable outcomes and scale teams for growth.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Link href="/contact" className="group px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
-                                Talk to an Expert
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Link href="/contact" className="group px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                                Talk to an expert
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link href="/services" className="px-8 py-4 text-primary font-semibold hover:text-primary/80 transition-colors bg-white/50 backdrop-blur-sm rounded-full border border-gray-200">
-                                Explore Our Services
+                            <Link href="/services" className="px-8 py-4 text-white font-semibold hover:bg-white/10 transition-colors rounded-full border border-white/30 flex items-center justify-center">
+                                Explore our services
                             </Link>
                         </div>
                     </motion.div>

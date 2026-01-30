@@ -1,26 +1,26 @@
 export interface Article {
-    slug: string;
-    category: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-    image: string;
-    content: string;
-    featured?: boolean;
+  slug: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  image: string;
+  content: string;
+  featured?: boolean;
 }
 
 export const articles: Article[] = [
-    {
-        slug: 'zero-trust-imperative-2026',
-        category: 'Cybersecurity',
-        title: 'The Zero Trust Imperative in 2026',
-        excerpt: 'Why traditional perimeter defenses are obsolete in an era of distributed enterprise.',
-        date: 'Oct 12, 2025',
-        readTime: '5 min read',
-        image: '/images/zero-trust.png',
-        featured: true,
-        content: `
+  {
+    slug: 'zero-trust-imperative-2026',
+    category: 'Cybersecurity',
+    title: 'The Zero Trust Imperative in 2026',
+    excerpt: 'Why traditional perimeter defenses are obsolete in an era of distributed enterprise.',
+    date: 'Oct 12, 2025',
+    readTime: '5 min read',
+    image: '/images/insights/zero-trust.png',
+    featured: true,
+    content: `
       <p>The traditional "castle and moat" security model is dead. In an era where data lives in the cloud, employees work from anywhere, and IoT devices proliferate, the concept of a "perimeter" has dissolved. Welcome to the age of Zero Trust.</p>
       
       <h3>The Paradigm Shift</h3>
@@ -39,16 +39,16 @@ export const articles: Article[] = [
       <h3>Implementation Challenges</h3>
       <p>Transitioning to Zero Trust is a journey, not a flip of a switch. It requires a cultural shift, legacy system modernization, and comprehensive data classification. However, the cost of inaction is far greater. In 2026, Zero Trust is not just best practice—it is the baseline for survival.</p>
     `
-    },
-    {
-        slug: 'generative-ai-beyond-hype',
-        category: 'AI Strategy',
-        title: 'Generative AI: Moving Beyond the Hype',
-        excerpt: 'Implementing practical use cases that drive real ROI.',
-        date: 'Sep 28, 2025',
-        readTime: '5 min read',
-        image: '/images/gen-ai.png',
-        content: `
+  },
+  {
+    slug: 'generative-ai-beyond-hype',
+    category: 'AI Strategy',
+    title: 'Generative AI: Moving Beyond the Hype',
+    excerpt: 'Implementing practical use cases that drive real ROI.',
+    date: 'Sep 28, 2025',
+    readTime: '5 min read',
+    image: '/images/insights/gen-ai.png',
+    content: `
       <p>Generative AI has captured the world's imagination, but for enterprises, the question has shifted from "what can it do?" to "what value does it create?" As the initial hype cycle subsides, we are entering the phase of practical, high-impact implementation.</p>
 
       <h3>From Experimentation to Integration</h3>
@@ -66,16 +66,16 @@ export const articles: Article[] = [
       <h3>Governance and Ethics</h3>
       <p>With great power comes great liability. Establishing "AI Guardrails" is essential. This includes mechanisms for copyright compliance, bias detection, and output verification. The winners in 2026 will not be those who move fastest, but those who move most responsibly.</p>
     `
-    },
-    {
-        slug: 'emerging-markets-outlook-q4',
-        category: 'Market Intelligence',
-        title: 'Emerging Markets Outlook Q4 2025',
-        excerpt: 'Key growth indicators in APAC and LATAM regions.',
-        date: 'Sep 15, 2025',
-        readTime: '5 min read',
-        image: '/images/market-intel.png',
-        content: `
+  },
+  {
+    slug: 'emerging-markets-outlook-q4',
+    category: 'Market Intelligence',
+    title: 'Emerging Markets Outlook Q4 2025',
+    excerpt: 'Key growth indicators in APAC and LATAM regions.',
+    date: 'Sep 15, 2025',
+    readTime: '5 min read',
+    image: '/images/insights/market-intel.png',
+    content: `
       <p>As developed economies face saturation and slow growth, the global center of economic gravity continues to shift towards emerging markets. Our analysis for Q4 2025 highlights critical opportunities in the APAC and LATAM regions that smart investors cannot afford to ignore.</p>
 
       <h3>APAC: The Digital Consumer Explosion</h3>
@@ -87,16 +87,16 @@ export const articles: Article[] = [
       <h3>Navigating Risk</h3>
       <p>Opportunity comes with volatility. Currency fluctuations, regulatory pivots, and infrastructure gaps remain challenges. A nuanced, hyper-local strategy is required. It is not enough to have a "LATAM strategy"; you need a Brazil strategy, a Chile strategy, and a Colombia strategy.</p>
     `
-    },
-    {
-        slug: 'digital-transformation-pitfalls',
-        category: 'Digital Transformation',
-        title: 'Digital Transformation Pitfalls',
-        excerpt: 'Why 70% of initiatives fail and how to be the 30%.',
-        date: 'Sep 02, 2025',
-        readTime: '5 min read',
-        image: '/images/digital-trans.png',
-        content: `
+  },
+  {
+    slug: 'digital-transformation-pitfalls',
+    category: 'Digital Transformation',
+    title: 'Digital Transformation Pitfalls',
+    excerpt: 'Why 70% of initiatives fail and how to be the 30%.',
+    date: 'Sep 02, 2025',
+    readTime: '5 min read',
+    image: '/images/insights/digital-transformation.png',
+    content: `
       <p>Digital transformation has become a buzzword so overused it risks losing meaning. Yet, the imperative to modernize is real. The tragic reality is that nearly 70% of digital transformation initiatives fail to achieve their stated goals. Why?</p>
 
       <h3>The "Tech-First" Trap</h3>
@@ -108,5 +108,5 @@ export const articles: Article[] = [
       <h3>The KPI Disconnect</h3>
       <p>Are you measuring activity or impact? Tracking "number of apps migrated" is vanity. Tracking "reduction in time-to-market" or "customer retention increase" is sanity. Aligning digital initiatives with hard business outcomes is the only way to sustain executive sponsorship over the long haul.</p>
     `
-    }
+  }
 ];
