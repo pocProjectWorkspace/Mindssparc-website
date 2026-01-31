@@ -6,16 +6,16 @@ const footerLinks = {
         { name: 'Secure', href: '/services/secure' },
         { name: 'Intelligence', href: '/services/intelligence' },
         { name: 'Talent', href: '/services/recruitment' },
-        { name: 'All Services', href: '/services' }
+
     ],
     Industries: [
-        { name: 'Financial Services', href: '/industries' },
-        { name: 'Healthcare', href: '/industries' },
-        { name: 'Technology', href: '/industries' },
-        { name: 'Public Sector', href: '/industries' }
+        { name: 'GCC', href: '/industries/gcc' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Education', href: '/industries/education' }
     ],
     Company: [
-        { name: 'About Us', href: '/' },
+        { name: 'About Us', href: '/about' },
         { name: 'Careers', href: '/careers' },
         { name: 'Insights', href: '/insights' },
         { name: 'Contact', href: '/contact' }
@@ -23,7 +23,7 @@ const footerLinks = {
     Legal: [
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/privacy' }
+        { name: 'Cookie Policy', href: '/cookies' }
     ]
 };
 

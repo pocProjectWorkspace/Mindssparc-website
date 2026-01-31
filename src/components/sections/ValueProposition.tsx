@@ -12,22 +12,22 @@ const benefits = [
     },
     {
         title: "Secure-by-Design",
-        description: "Security isn't an afterthought. It's woven into every solution from day one.",
+        description: "Incorporating AI-first approach where security is woven into every solution.",
         icon: Shield
     },
     {
-        title: "Industry Context",
-        description: "Deep domain expertise ensures our solutions fit your specific market reality.",
+        title: "Industry Contextual",
+        description: "Deep domain expertise ensuring solutions fit your specific market reality.",
         icon: LayoutTemplate
     },
     {
         title: "Measurable Impact",
-        description: "We focus on outcomes that matter—ROI, efficiency, and growth.",
+        description: "We focus on outcomes that matter—measurable business impact and efficiency.",
         icon: Target
     },
     {
-        title: "Long-term Partner",
-        description: "We build relationships that last, scaling with you as you grow.",
+        title: "Long-term Partnership",
+        description: "A mindset focused on building relationships that last and scaling with you.",
         icon: Zap
     }
 ];
@@ -76,7 +76,7 @@ export function ValueProposition() {
                                 </span>
                             </h2>
                             <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                                At MindsSparc, we partner with organizations to solve complex challenges at the intersection of technology, security, and talent. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
+                                At MindsSparc, we believe that doing the right thing and putting your interests first is the only way to build a lasting partnership. Our approach is grounded in deep domain expertise, industry context, and an unwavering focus on outcomes that matter.
                             </p>
 
                             <div className="flex items-center gap-4 text-sm text-gray-500 font-medium">
