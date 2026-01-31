@@ -30,17 +30,17 @@ export default function EducationPage() {
                                 <motion.div
                                     key={i}
                                     className="absolute bottom-0 w-2 h-2 rounded-full bg-yellow-400 blur-sm"
-                                    style={{ left: `${Math.random() * 100}%` }}
+                                    style={{ left: `${(i * 7) % 100}%` }}
                                     animate={{
                                         y: [100, -800],
                                         opacity: [0, 1, 0],
                                         scale: [0.5, 1.5]
                                     }}
                                     transition={{
-                                        duration: 5 + Math.random() * 5,
+                                        duration: 5 + (i % 5),
                                         repeat: Infinity,
                                         ease: "easeOut",
-                                        delay: Math.random() * 5
+                                        delay: i * 0.5
                                     }}
                                 />
                             ))}

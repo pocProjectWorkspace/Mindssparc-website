@@ -140,6 +140,33 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                                         </>
                                                     )}
 
+                                                    {(defaultService === 'Healthcare' || defaultService === 'Healthcare & Life Sciences') && (
+                                                        <>
+                                                            <option value="interoperability">Improve data interoperability</option>
+                                                            <option value="patient_experience">Enhance patient experience</option>
+                                                            <option value="compliance">Regulatory compliance (HIPAA/GDPR)</option>
+                                                            <option value="telehealth">Expand telehealth capabilities</option>
+                                                        </>
+                                                    )}
+
+                                                    {(defaultService === 'Manufacturing' || defaultService === 'Custom Manufacturing') && (
+                                                        <>
+                                                            <option value="smart_factory">Implement Smart Factory / IoT</option>
+                                                            <option value="supply_chain">Optimize supply chain resilience</option>
+                                                            <option value="predictive_maintenance">Predictive maintenance</option>
+                                                            <option value="digital_twin">Digital Twin implementation</option>
+                                                        </>
+                                                    )}
+
+                                                    {(defaultService === 'GCC' || defaultService === 'Global Capability Centres') && (
+                                                        <>
+                                                            <option value="setup">New GCC Setup</option>
+                                                            <option value="scale">Scale existing operations</option>
+                                                            <option value="transformation">GCC-led Digital Transformation</option>
+                                                            <option value="talent">Talent acquisition & branding</option>
+                                                        </>
+                                                    )}
+
                                                     <option value="other">Other</option>
                                                 </select>
                                             </div>

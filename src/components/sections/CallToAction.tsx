@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ConsultationModal } from '@/components/ui/ConsultationModal';
 
 export function CallToAction() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="py-32 bg-gray-950 relative overflow-hidden text-center">
             {/* Background Glow */}
@@ -19,18 +23,24 @@ export function CallToAction() {
                     </p>
 
                     <div className="flex justify-center">
-                        <Link
-                            href="/contact"
+                        <button
+                            onClick={() => setIsModalOpen(true)}
                             className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-gray-950 text-lg font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:bg-blue-50"
                         >
                             <span className="relative z-10">Talk to an Expert</span>
                             <div className="p-1 rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors">
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </div>
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
+
+            <ConsultationModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                defaultService="General"
+            />
         </section>
     );
 }

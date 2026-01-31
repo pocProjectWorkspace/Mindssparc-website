@@ -1,12 +1,16 @@
 'use client';
 
+import { useState } from 'react';
+import { ConsultationModal } from '@/components/ui/ConsultationModal';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
-import { Activity, Heart, Shield, Database, ArrowRight, CheckCircle, Smartphone } from 'lucide-react';
+import { Activity, Heart, Shield, Database, ArrowRight, CheckCircle, Smartphone, Users, Briefcase } from 'lucide-react';
+import { GraduationCap, Wallet, HandHeart, Laptop } from 'lucide-react'; // Adding missing icons
 import Image from 'next/image';
 
 export default function HealthcarePage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-emerald-500/30">
             <Header />
@@ -133,30 +137,79 @@ export default function HealthcarePage() {
                     </div>
                 </section>
 
-                {/* How We Solve It */}
-                <section className="py-24 bg-gray-900/50">
+
+
+                {/* Powered by Upllyft Section */}
+                <section className="py-24 relative overflow-hidden bg-gray-900/30">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-3xl font-bold mb-16 text-center">The MindsSparc Approach</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="max-w-4xl mx-auto text-center mb-16">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/20 border border-emerald-500/30 text-emerald-400 text-sm font-semibold mb-6">
+                                <Activity className="w-4 h-4" /> Powered by Upllyft
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6">Comprehensive Lifecycle Care</h2>
+                            <p className="text-xl text-gray-300 leading-relaxed">
+                                MindsSparc integrates <strong>Upllyft</strong> to provide a holistic ecosystem for therapy, education, and long-term support. A connected platform ensuring no stage of care is overlooked.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                             {[
-                                { title: "Interoperability Cloud", desc: "Unified data fabric for seamless information exchange." },
-                                { title: "AI Diagnostics", desc: "Assisting clinicians with faster, more accurate insights." },
-                                { title: "Digital Patient Twin", desc: "Simulation models for personalized treatment efficacy." },
-                                { title: "Compliance Automation", desc: "Automated checks for regulatory adherence." },
-                                { title: "Telehealth 2.0", desc: "Next-gen remote care platforms." },
-                                { title: "Supply Chain Resilience", desc: "Ensuring availability of critical medical supplies." }
-                            ].map((solution, i) => (
+                                {
+                                    title: "Care Co-ordination & IEP",
+                                    features: ["Cuts diagnosis-to-therapy lag", "Cross-team goal tracking", "Boosts IEP compliance"],
+                                    icon: Activity
+                                },
+                                {
+                                    title: "Therapy Marketplace",
+                                    features: ["Expands Tier-2/3 access", "Credentialed, verified care", "Higher therapy adherence"],
+                                    icon: Heart
+                                },
+                                {
+                                    title: "Assistive Tech & Devices",
+                                    features: ["Faster access to AAC/mobility", "Insurance-linked procurement", "Standardizes device quality"],
+                                    icon: Smartphone
+                                },
+                                {
+                                    title: "Education & Inclusion",
+                                    features: ["Earlier learning difficulty detection", "Upskills mainstream teachers", "Tracks NEP 2020 compliance"],
+                                    icon: GraduationCap
+                                },
+                                {
+                                    title: "Employment & Skilling",
+                                    features: ["National therapist registry", "Ongoing CPD to prevent burnout", "Inclusion workforce pipeline"],
+                                    icon: Briefcase
+                                },
+                                {
+                                    title: "Stakeholder Community",
+                                    features: ["Improves at-home reinforcement", "Reduces stakeholder burnout", "Strengthens advocacy voice"],
+                                    icon: Users
+                                },
+                                {
+                                    title: "Long-term Financial Planning",
+                                    features: ["Seamless care across life stages", "Guardianship & trust support", "Lifetime care budgeting tools"],
+                                    icon: Wallet
+                                }
+                            ].map((item, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: i * 0.05 }}
-                                    className="p-8 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors group"
+                                    transition={{ delay: i * 0.1 }}
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 group"
                                 >
-                                    <div className="w-8 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mb-6 group-hover:w-16 transition-all duration-300" />
-                                    <h3 className="text-xl font-bold text-white mb-3">{solution.title}</h3>
-                                    <p className="text-gray-400">{solution.desc}</p>
+                                    <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                                        <item.icon className="w-5 h-5" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-4">{item.title}</h3>
+                                    <ul className="space-y-2">
+                                        {item.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </motion.div>
                             ))}
                         </div>
@@ -167,11 +220,20 @@ export default function HealthcarePage() {
                 <section className="py-24">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl font-bold mb-6">Ready to innovate for better outcomes?</h2>
-                        <button className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
+                        >
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
                 </section>
+
+                <ConsultationModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    defaultService="Healthcare"
+                />
 
             </main>
             <Footer />

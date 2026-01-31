@@ -3,21 +3,16 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image'; // Unused now
+import { WaveHero } from '@/components/ui/WaveHero';
 
 export function Hero() {
     return (
         <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gray-950 pt-20">
 
-            {/* Background Image - Full Screen */}
+            {/* Background Animation */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/hero/hero-bg.png"
-                    alt="Background"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <WaveHero />
                 {/* Gradient Overlay for Text Readability - Darker on the left */}
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/60 to-gray-950/30" />
             </div>

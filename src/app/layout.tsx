@@ -4,6 +4,8 @@ import './globals.css';
 import { clsx } from 'clsx';
 import { CookieConsent } from '@/components/ui/CookieConsent';
 
+import { ChatWidget } from '@/components/chat/ChatWidget';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -21,6 +23,7 @@ export default function RootLayout({
       <body className={clsx(inter.className, 'bg-background text-foreground antialiased')}>
         {children}
         <CookieConsent />
+        <ChatWidget />
       </body>
     </html>
   );

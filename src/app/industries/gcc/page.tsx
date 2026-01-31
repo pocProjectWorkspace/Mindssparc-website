@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+import { ConsultationModal } from '@/components/ui/ConsultationModal';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
@@ -7,12 +9,13 @@ import { Globe, Building2, Users, Zap, ArrowRight, CheckCircle, TrendingUp } fro
 import Image from 'next/image';
 
 export default function GCCPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-blue-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
-
                 {/* Hero Section */}
                 <section className="relative py-24 md:py-32 overflow-hidden text-center flex flex-col items-center">
                     <div className="absolute inset-0 z-0 bg-gray-950 pointer-events-none">
@@ -171,11 +174,20 @@ export default function GCCPage() {
                 <section className="py-24">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl font-bold mb-6">Ready to transform your Global Capability Centre?</h2>
-                        <button className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-blue-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-blue-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
+                        >
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
                 </section>
+
+                <ConsultationModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    defaultService="GCC"
+                />
 
             </main>
             <Footer />

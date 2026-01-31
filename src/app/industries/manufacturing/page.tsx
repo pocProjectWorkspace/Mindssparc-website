@@ -6,15 +6,21 @@ import { motion } from 'framer-motion';
 import { Factory, Truck, Box, Cpu, ArrowRight, CheckCircle, BarChart3, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
+
+import { useState } from 'react';
+import { ConsultationModal } from '@/components/ui/ConsultationModal';
+
 export default function ManufacturingPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-amber-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
-
                 {/* Hero Section */}
                 <section className="relative py-24 md:py-32 overflow-hidden text-center flex flex-col items-center">
+                    {/* ... (keep existing hero content) ... */}
                     <div className="absolute inset-0 z-0 bg-gray-950 pointer-events-none">
                         {/* Abstract Grid */}
                         <div className="absolute inset-0 opacity-20"
@@ -160,11 +166,19 @@ export default function ManufacturingPage() {
                 <section className="py-24">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl font-bold mb-6">Ready to build the factory of the future?</h2>
-                        <button className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-amber-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-amber-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
                 </section>
+
+                <ConsultationModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    defaultService="Manufacturing"
+                />
 
             </main>
             <Footer />
