@@ -8,9 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { messages, status, append } = useChat() as any;
+    const { messages, status, input, handleInputChange, handleSubmit } = useChat() as any;
 
-    const [input, setInput] = useState('');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Derive isLoading
@@ -20,27 +19,6 @@ export function ChatWidget() {
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!input.trim()) return;
-
-        const content = input;
-        setInput('');
-
-        // Construct message object for backend
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const userMessage = {
-            role: 'user',
-            content: content,
-        } as any;
-
-        try {
-            await append(userMessage);
-        } catch (err) {
-            console.error("Chat send error:", err);
-        }
-    };
 
     return (
         <>
@@ -133,7 +111,7 @@ export function ChatWidget() {
                             <div className="relative">
                                 <input
                                     value={input}
-                                    onChange={(e) => setInput(e.target.value)}
+                                    onChange={handleInputChange}
                                     placeholder="Type your question..."
                                     className="w-full bg-gray-950 text-white placeholder-gray-500 text-sm rounded-full py-3 pl-4 pr-12 border border-white/10 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                                 />
