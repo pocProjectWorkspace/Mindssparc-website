@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Globe2, Stethoscope, Factory, GraduationCap, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const industries = [
@@ -12,7 +13,8 @@ const industries = [
         title: 'Global Capability Centers (GCC’s)',
         description: 'Strategic hubs for innovation, scaling operations, and driving digital transformation.',
         color: 'from-blue-600 to-indigo-900',
-        image: '/images/industries/gcc.png'
+        image: '/images/industries/gcc.png',
+        href: '/industries/gcc'
     },
     {
         id: 'healthcare',
@@ -20,7 +22,8 @@ const industries = [
         title: 'Healthcare & Life Sciences',
         description: 'Accelerating patient outcomes through data interoperability and AI-driven precision.',
         color: 'from-emerald-600 to-teal-900',
-        image: '/images/industries/healthcare.png'
+        image: '/images/industries/healthcare.png',
+        href: '/industries/healthcare'
     },
     {
         id: 'manufacturing',
@@ -28,7 +31,8 @@ const industries = [
         title: 'Manufacturing',
         description: 'Industry 4.0 realization with smart factories, predictive maintenance, and supply chain resilience.',
         color: 'from-orange-600 to-red-900',
-        image: '/images/industries/manufacturing.png'
+        image: '/images/industries/manufacturing.png',
+        href: '/industries/manufacturing'
     },
     {
         id: 'education',
@@ -36,7 +40,8 @@ const industries = [
         title: 'Education',
         description: 'Learning analytics, personalisation, AI tutors, automated grading, and platform modernisation with governance.',
         color: 'from-violet-600 to-purple-900',
-        image: '/images/industries/education.png'
+        image: '/images/industries/education.png',
+        href: '/industries/education'
     }
 ];
 
@@ -94,9 +99,9 @@ export function Industries() {
                                             <p className="text-gray-200 text-lg leading-relaxed mb-6 max-w-xl">
                                                 {industry.description}
                                             </p>
-                                            <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-blue-300 transition-colors">
+                                            <Link href={industry.href} className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-blue-300 transition-colors inline-block w-fit">
                                                 Learn More <ArrowRight className="w-4 h-4" />
-                                            </button>
+                                            </Link>
                                         </motion.div>
                                     ) : (
                                         <div className="flex lg:flex-col items-center lg:items-start justify-center lg:justify-between h-full w-full py-6 px-2">
