@@ -18,10 +18,10 @@ const navItems = [
     },
     {
         name: 'What we do',
-        mega: true,
-        columns: [
+        dropdown: true,
+        groups: [
             {
-                title: 'Capabilities',
+                label: 'Services',
                 items: [
                     { name: 'MindsSparc Secure', href: '/services/secure' },
                     { name: 'MindsSparc Intelligence', href: '/services/intelligence' },
@@ -29,10 +29,10 @@ const navItems = [
                 ]
             },
             {
-                title: 'Industries',
+                label: 'Industries',
                 items: [
                     { name: 'Global Capability Centres', href: '/industries/gcc' },
-                    { name: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
+                    { name: 'Healthcare', href: '/industries/healthcare' },
                     { name: 'Manufacturing', href: '/industries/manufacturing' },
                     { name: 'Education', href: '/industries/education' }
                 ]
@@ -52,19 +52,26 @@ const navItems = [
 export function Header() {
     const [hoveredNav, setHoveredNav] = useState<string | null>(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+
+    // Flatten grouped items for rendering
+    const getDropdownItems = (item: typeof navItems[number]) => {
+        if (item.groups) return item.groups;
+        if (item.items) return [{ label: null, items: item.items }];
+        return [];
+    };
 
     return (
         <header className="absolute w-full z-50">
-            {/* Main Navbar */}
             <nav
                 className="bg-gray-950/95 backdrop-blur-md border-b border-white/10 relative z-50"
                 onMouseLeave={() => setHoveredNav(null)}
             >
-                <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+                <div className="container mx-auto px-6 h-28 flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
-                            <div className="relative h-14 w-14 shrink-0">
+                            <div className="relative h-40 w-40 shrink-0">
                                 <Image
                                     src="/logos/MindsSparc_Logo_Dark.png"
                                     alt="MindsSparc"
@@ -82,15 +89,16 @@ export function Header() {
                         {navItems.map((item) => (
                             <div
                                 key={item.name}
-                                className="h-full flex items-center"
-                                onMouseEnter={() => item.dropdown || item.mega ? setHoveredNav(item.name) : setHoveredNav(null)}
+                                className="relative h-full flex items-center"
+                                onMouseEnter={() => item.dropdown ? setHoveredNav(item.name) : setHoveredNav(null)}
+                                onMouseLeave={() => setHoveredNav(null)}
                             >
-                                {item.dropdown || item.mega ? (
+                                {item.dropdown ? (
                                     <button
                                         className={`flex items-center gap-1 text-sm font-medium transition-colors ${hoveredNav === item.name ? 'text-white' : 'text-gray-300 hover:text-white'}`}
                                     >
                                         {item.name}
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${hoveredNav === item.name ? 'rotate-180' : ''}`} />
+                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${hoveredNav === item.name ? 'rotate-180' : ''}`} />
                                     </button>
                                 ) : (
                                     <Link
@@ -100,6 +108,45 @@ export function Header() {
                                         {item.name}
                                     </Link>
                                 )}
+
+                                {/* Dropdown Panel */}
+                                <AnimatePresence>
+                                    {item.dropdown && hoveredNav === item.name && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 8 }}
+                                            transition={{ duration: 0.15, ease: 'easeOut' }}
+                                            className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                                        >
+                                            <div className="bg-white rounded-xl shadow-xl shadow-black/10 border border-gray-100 py-2 min-w-[240px]">
+                                                {getDropdownItems(item).map((group, gi) => (
+                                                    <div key={gi}>
+                                                        {gi > 0 && (
+                                                            <div className="mx-4 my-2 border-t border-gray-100" />
+                                                        )}
+                                                        {group.label && (
+                                                            <div className="px-4 pt-2 pb-1">
+                                                                <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-400">
+                                                                    {group.label}
+                                                                </span>
+                                                            </div>
+                                                        )}
+                                                        {group.items.map((subItem) => (
+                                                            <Link
+                                                                key={subItem.name}
+                                                                href={subItem.href}
+                                                                className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors font-medium"
+                                                            >
+                                                                {subItem.name}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         ))}
 
@@ -121,133 +168,89 @@ export function Header() {
                         </button>
                     </div>
                 </div>
+            </nav>
 
-                {/* Mega Menu / Dropdown Content */}
-                <AnimatePresence>
-                    {hoveredNav && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 w-full bg-gray-950 border-t border-white/10 shadow-2xl py-12"
-                            onMouseEnter={() => setHoveredNav(hoveredNav)}
-                            onMouseLeave={() => setHoveredNav(null)}
-                        >
-                            <div className="container mx-auto px-6">
-                                {navItems.map((item) => {
-                                    if (item.name !== hoveredNav) return null;
-
-                                    // Render Mega Menu Columns
-                                    if (item.mega && item.columns) {
-                                        return (
-                                            <div key={item.name} className="flex gap-24">
-                                                <div className="w-1/4">
-                                                    <h3 className="text-2xl font-bold mb-4 text-teal-400">
-                                                        {item.name}
-                                                    </h3>
-                                                    <p className="text-gray-500 text-sm leading-relaxed">
-                                                        Explore our capabilities and the industries we serve.
-                                                    </p>
-                                                </div>
-                                                <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-12">
-                                                    {item.columns.map((col) => (
-                                                        <div key={col.title}>
-                                                            <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-white/10 pb-2">
-                                                                {col.title}
-                                                            </h4>
-                                                            <ul className="space-y-4">
-                                                                {col.items.map((subItem) => (
-                                                                    <li key={subItem.name}>
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-24 px-6 overflow-y-auto"
+                    >
+                        <div className="flex flex-col gap-2">
+                            {navItems.map((item) => (
+                                <div key={item.name}>
+                                    {item.dropdown ? (
+                                        <div>
+                                            <button
+                                                onClick={() => setMobileExpanded(mobileExpanded === item.name ? null : item.name)}
+                                                className="w-full flex items-center justify-between py-4 border-b border-white/10"
+                                            >
+                                                <span className="text-lg font-semibold text-white">{item.name}</span>
+                                                <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${mobileExpanded === item.name ? 'rotate-180' : ''}`} />
+                                            </button>
+                                            <AnimatePresence>
+                                                {mobileExpanded === item.name && (
+                                                    <motion.div
+                                                        initial={{ height: 0, opacity: 0 }}
+                                                        animate={{ height: 'auto', opacity: 1 }}
+                                                        exit={{ height: 0, opacity: 0 }}
+                                                        transition={{ duration: 0.2 }}
+                                                        className="overflow-hidden"
+                                                    >
+                                                        <div className="py-2 pl-4">
+                                                            {getDropdownItems(item).map((group, gi) => (
+                                                                <div key={gi}>
+                                                                    {group.label && (
+                                                                        <div className="pt-3 pb-1">
+                                                                            <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">
+                                                                                {group.label}
+                                                                            </span>
+                                                                        </div>
+                                                                    )}
+                                                                    {group.items.map((subItem) => (
                                                                         <Link
+                                                                            key={subItem.name}
                                                                             href={subItem.href}
-                                                                            className="text-gray-300 hover:text-teal-400 font-medium transition-colors block py-1"
+                                                                            onClick={() => setMobileMenuOpen(false)}
+                                                                            className="block py-3 text-gray-400 hover:text-teal-400 transition-colors"
                                                                         >
                                                                             {subItem.name}
                                                                         </Link>
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
+                                                                    ))}
+                                                                </div>
+                                                            ))}
                                                         </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        );
-                                    }
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    ) : (
+                                        <Link
+                                            href={item.href || '#'}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="block py-4 text-lg font-semibold text-white border-b border-white/10"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    )}
+                                </div>
+                            ))}
 
-                                    // Render Simple Dropdown
-                                    if (item.dropdown && item.items) {
-                                        return (
-                                            <div key={item.name} className="flex gap-16">
-                                                <div className="w-1/4">
-                                                    <h3 className="text-2xl font-bold mb-4 text-teal-400">
-                                                        {item.name}
-                                                    </h3>
-                                                </div>
-                                                <ul className="space-y-4 min-w-[200px]">
-                                                    {item.items.map((subItem) => (
-                                                        <li key={subItem.name}>
-                                                            <Link
-                                                                href={subItem.href}
-                                                                className="text-lg text-gray-300 hover:text-teal-400 font-medium transition-colors block"
-                                                            >
-                                                                {subItem.name}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        );
-                                    }
-                                })}
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </nav>
-
-            {/* Mobile Menu Backdrop */}
-            {mobileMenuOpen && (
-                <div className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-24 px-6 overflow-y-auto">
-                    <div className="flex flex-col gap-6">
-                        {navItems.map((item) => (
-                            <div key={item.name} className="border-b border-white/10 pb-4">
-                                <div className="text-xl font-bold text-white mb-4">{item.name}</div>
-                                {item.items && (
-                                    <ul className="pl-4 space-y-3">
-                                        {item.items.map(subItem => (
-                                            <li key={subItem.name}>
-                                                <Link href={subItem.href} onClick={() => setMobileMenuOpen(false)} className="text-gray-400 block py-2">
-                                                    {subItem.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                                {item.columns && item.columns.map(col => (
-                                    <div key={col.title} className="pl-4 mb-4">
-                                        <h4 className="text-gray-500 text-sm font-bold uppercase mb-2">{col.title}</h4>
-                                        <ul className="pl-2 space-y-3">
-                                            {col.items.map(subItem => (
-                                                <li key={subItem.name}>
-                                                    <Link href={subItem.href} onClick={() => setMobileMenuOpen(false)} className="text-gray-400 block py-1">
-                                                        {subItem.name}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                                {!item.items && !item.columns && (
-                                    <Link href={item.href || '#'} onClick={() => setMobileMenuOpen(false)} className="text-gray-400 block py-2">
-                                        Open Link
-                                    </Link>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
+                            <Link
+                                href="/contact"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="mt-6 px-6 py-4 bg-white text-gray-950 text-center font-bold rounded-full"
+                            >
+                                Contact Us
+                            </Link>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }

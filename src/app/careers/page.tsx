@@ -94,15 +94,15 @@ export default function CareersPage() {
 
                             <h2 className="text-3xl font-bold mb-6 relative z-10">Ready to make your mark?</h2>
                             <p className="text-gray-300 text-lg mb-8 leading-relaxed relative z-10">
-                                If you are interested to explore opportunities with us, we'd love to hear from you. Drop your CV to our talent team.
+                                If you are interested to explore opportunities with us, we&apos;d love to hear from you. Drop your CV to our talent team.
                             </p>
 
                             <a
-                                href="mailto:talent@mindssparc.com"
+                                href="mailto:info@mindssparc.com"
                                 className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-all hover:scale-105 shadow-xl shadow-white/10"
                             >
                                 <Mail className="w-5 h-5" />
-                                talent@mindssparc.com
+                                info@mindssparc.com
                             </a>
                         </div>
                     </div>

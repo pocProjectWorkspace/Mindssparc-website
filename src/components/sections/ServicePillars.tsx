@@ -114,7 +114,7 @@ export function ServicePillars() {
 
                                     {/* Content Section */}
                                     <div className="p-8 flex flex-col flex-grow">
-                                        <h3 className="text-sm font-extrabold text-teal-400 mb-3 uppercase tracking-wider">{pillar.title}</h3>
+                                        <h3 className="text-sm font-extrabold text-teal-400 mb-3 tracking-wider">{pillar.title}</h3>
                                         {/* Added text-balance and slightly adjusted size/leading */}
                                         <h4 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug whitespace-pre-line group-hover:text-teal-200 transition-colors">
                                             {pillar.headline}

@@ -14,7 +14,7 @@ const features = [
     },
     {
         title: 'Specialized Hiring',
-        description: 'Targeted hiring ensuring you find the right fit in competitive markets',
+        description: 'Targeted hiring ensuring you find the right fit in competitive markets.',
         icon: UserCheck
     },
     {

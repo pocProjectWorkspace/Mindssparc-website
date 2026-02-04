@@ -19,7 +19,7 @@ const features = [
     },
     {
         title: 'AI Governance & Compliance',
-        description: 'Navigate the ethical and regulatory mandates.',
+        description: 'Navigate the ethical and regulatory mandates with robust governance frameworks.',
         icon: Scale
     },
     {
