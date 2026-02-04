@@ -46,7 +46,7 @@ export function Leadership() {
             <div className="absolute inset-0 bg-gray-950">
                 <div className="absolute inset-0 opacity-20"
                     style={{
-                        backgroundImage: 'radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                        backgroundImage: 'radial-gradient(circle, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                         backgroundSize: '20px 20px'
                     }}
                 />
@@ -65,7 +65,7 @@ export function Leadership() {
                         <div
                             key={leader.name}
                             onClick={() => setSelectedLeader(leader)}
-                            className="bg-gray-900/50 border border-white/10 p-6 rounded-xl hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 cursor-pointer group backdrop-blur-sm"
+                            className="bg-gray-900/50 border border-white/10 p-6 rounded-xl hover:border-teal-500/50 hover:shadow-2xl hover:shadow-teal-900/10 transition-all duration-300 cursor-pointer group backdrop-blur-sm"
                         >
                             <div className="h-96 w-full bg-gray-800 rounded-lg mb-6 flex items-center justify-center overflow-hidden relative">
                                 {leader.image ? (
@@ -82,11 +82,11 @@ export function Leadership() {
                                     </div>
                                 )}
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{leader.name}</h3>
+                            <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-teal-400 transition-colors">{leader.name}</h3>
                             <p className="text-gray-400 font-medium uppercase tracking-wide text-sm mb-2">{leader.role}</p>
                             <p className="text-gray-500 text-sm line-clamp-2 mb-4">{leader.headline}</p>
 
-                            <p className="text-blue-400 text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                            <p className="text-teal-400 text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
                                 View Profile
                             </p>
                         </div>
@@ -139,10 +139,10 @@ export function Leadership() {
                                         <h3 className="text-3xl font-bold text-white mb-2">
                                             {selectedLeader.name}
                                         </h3>
-                                        <p className="text-blue-400 font-medium uppercase tracking-wide text-sm mb-4">
+                                        <p className="text-teal-400 font-medium uppercase tracking-wide text-sm mb-4">
                                             {selectedLeader.role}
                                         </p>
-                                        <p className="text-lg text-gray-300 italic mb-4 font-light border-l-2 border-blue-500/50 pl-4">
+                                        <p className="text-lg text-gray-300 italic mb-4 font-light border-l-2 border-teal-500/50 pl-4">
                                             {selectedLeader.headline}
                                         </p>
                                     </div>
@@ -158,7 +158,7 @@ export function Leadership() {
                                     <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Focus Areas</h4>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedLeader.focusAreas.map((area, index) => (
-                                            <span key={index} className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm">
+                                            <span key={index} className="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-sm">
                                                 {area}
                                             </span>
                                         ))}

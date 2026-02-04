@@ -12,7 +12,7 @@ import Image from 'next/image';
 export default function HealthcarePage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-emerald-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -23,7 +23,7 @@ export default function HealthcarePage() {
                         {/* Abstract Grid */}
                         <div className="absolute inset-0 opacity-20"
                             style={{
-                                backgroundImage: 'linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)',
+                                backgroundImage: 'linear-gradient(rgba(13, 148, 136, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                                 backgroundSize: '40px 40px'
                             }}
                         />
@@ -58,12 +58,12 @@ export default function HealthcarePage() {
                             transition={{ duration: 0.6 }}
                             className="max-w-4xl"
                         >
-                            <h1 className="text-sm font-bold text-emerald-400 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-400 uppercase tracking-[0.2em] mb-4">
                                 Industry Focus
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
                                 Healthcare & <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                                <span className="text-teal-400">
                                     Life Sciences
                                 </span>
                             </h2>
@@ -94,9 +94,9 @@ export default function HealthcarePage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-emerald-500/30 transition-all group hover:bg-gray-900/50"
+                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-teal-500/30 transition-all group hover:bg-gray-900/50"
                                 >
-                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/10">
+                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/10">
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
@@ -109,10 +109,10 @@ export default function HealthcarePage() {
 
                 {/* The Need of the Hour */}
                 <section className="py-24 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-emerald-900/5" />
+                    <div className="absolute inset-0 bg-teal-900/5" />
                     <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="order-2 lg:order-1 relative h-[500px] w-full bg-gray-900 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 z-10" />
+                            <div className="absolute inset-0 bg-teal-500/10 z-10" />
                             <Image
                                 src="/images/industries/healthcare-need.png"
                                 alt="Interoperability"
@@ -121,14 +121,14 @@ export default function HealthcarePage() {
                             />
                         </div>
                         <div className="order-1 lg:order-2">
-                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-emerald-400">Interoperability</span></h2>
+                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Interoperability</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
                                 The future of healthcare is connected. Systems must talk to each other to provide a <strong className="text-white">longitudinal patient view</strong>, enabling preventative care and personalized treatment plans.
                             </p>
                             <ul className="space-y-4">
                                 {["Seamless data exchange", "Real-time analytics", "Secure telehealth platforms"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                                        <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                        <CheckCircle className="w-5 h-5 text-teal-500" />
                                         {item}
                                     </li>
                                 ))}
@@ -143,7 +143,7 @@ export default function HealthcarePage() {
                 <section className="py-24 relative overflow-hidden bg-gray-900/30">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center mb-16">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/20 border border-emerald-500/30 text-emerald-400 text-sm font-semibold mb-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-900/20 border border-teal-500/30 text-teal-400 text-sm font-semibold mb-6">
                                 <Activity className="w-4 h-4" /> Powered by Upllyft
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">Comprehensive Lifecycle Care</h2>
@@ -196,16 +196,16 @@ export default function HealthcarePage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 group"
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 group"
                                 >
-                                    <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                                    <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 mb-4 group-hover:bg-teal-500 group-hover:text-white transition-all">
                                         <item.icon className="w-5 h-5" />
                                     </div>
                                     <h3 className="text-lg font-bold text-white mb-4">{item.title}</h3>
                                     <ul className="space-y-2">
                                         {item.features.map((feature, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                                                <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-1.5 shrink-0" />
                                                 {feature}
                                             </li>
                                         ))}
@@ -222,7 +222,7 @@ export default function HealthcarePage() {
                         <h2 className="text-3xl font-bold mb-6">Ready to innovate for better outcomes?</h2>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
                         >
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>

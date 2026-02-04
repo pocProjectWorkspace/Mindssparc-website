@@ -16,13 +16,13 @@ export function Insights() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
-                        <span className="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2 block">Insights</span>
+                        <span className="text-teal-400 font-semibold tracking-wide uppercase text-sm mb-2 block">Insights</span>
                         <h2 className="text-4xl font-bold">Ideas that shape decisions.</h2>
                         <p className="text-gray-400 mt-4 max-w-xl text-lg">
                             Explore our perspectives on cybersecurity, AI, talent, and enterprise transformation.
                         </p>
                     </div>
-                    <Link href="/insights" className="text-white font-semibold hover:text-blue-400 transition-colors flex items-center gap-2 group">
+                    <Link href="/insights" className="text-white font-semibold hover:text-teal-400 transition-colors flex items-center gap-2 group">
                         View all insights <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
@@ -33,7 +33,7 @@ export function Insights() {
                             <article className="flex flex-col h-full bg-white/5 border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 hover:bg-white/10 transition-all duration-300">
                                 <div className="aspect-[16/9] bg-gray-900 overflow-hidden relative">
                                     {/* Gradient Fallback if image missing */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20" />
+                                    <div className="absolute inset-0 bg-teal-900/20" />
                                     <Image
                                         src={insight.image}
                                         alt={insight.title}
@@ -44,16 +44,16 @@ export function Insights() {
 
                                 <div className="p-6 flex flex-col flex-grow">
                                     <div className="flex items-center gap-3 text-xs font-bold text-gray-500 mb-4 uppercase tracking-wider">
-                                        <span className="text-blue-400">{insight.category}</span>
+                                        <span className="text-teal-400">{insight.category}</span>
                                         <span>•</span>
                                         <span>{insight.date}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors leading-snug">
+                                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-teal-200 transition-colors leading-snug">
                                         {insight.title}
                                     </h3>
                                     <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
                                         <span className="text-xs text-gray-500 font-medium">{insight.readTime}</span>
-                                        <div className="flex items-center gap-2 text-sm text-blue-400 font-medium group-hover:translate-x-1 transition-transform">
+                                        <div className="flex items-center gap-2 text-sm text-teal-400 font-medium group-hover:translate-x-1 transition-transform">
                                             Read article <ArrowRight className="w-3 h-3" />
                                         </div>
                                     </div>

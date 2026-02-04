@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function CareersPage() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-pink-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -17,19 +17,19 @@ export default function CareersPage() {
                         {/* Background Animation */}
                         <div className="absolute inset-0 opacity-20"
                             style={{
-                                backgroundImage: 'radial-gradient(circle, rgba(236, 72, 153, 0.1) 1px, transparent 1px)',
+                                backgroundImage: 'radial-gradient(circle, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                                 backgroundSize: '30px 30px'
                             }}
                         />
 
                         {/* Pink/Rose Glows for Passion/Talent */}
                         <motion.div
-                            className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[120px]"
+                            className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-teal-600/10 rounded-full blur-[120px]"
                             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
                             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                         />
                         <motion.div
-                            className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-rose-600/10 rounded-full blur-[100px]"
+                            className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-teal-600/10 rounded-full blur-[100px]"
                             animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }}
                             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                         />
@@ -41,12 +41,12 @@ export default function CareersPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h1 className="text-sm font-bold text-pink-400 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-400 uppercase tracking-[0.2em] mb-4">
                                 Join MindsSparc
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight max-w-4xl mx-auto">
                                 Shape the future <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
+                                <span className="text-teal-400">
                                     of transformation.
                                 </span>
                             </h2>
@@ -74,7 +74,7 @@ export default function CareersPage() {
                                     transition={{ delay: i * 0.1 }}
                                     className="p-8 rounded-2xl bg-white/5 border border-white/10 text-center"
                                 >
-                                    <div className="w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-pink-400">
+                                    <div className="w-12 h-12 bg-teal-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-teal-400">
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -86,11 +86,11 @@ export default function CareersPage() {
                 </section>
 
                 {/* CTA / Contact Section */}
-                <section className="py-24 bg-gradient-to-b from-gray-950 to-pink-950/20">
+                <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
                         <div className="max-w-2xl mx-auto p-10 rounded-3xl bg-gray-900 border border-white/10 relative overflow-hidden">
                             {/* Decorative Glow */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
 
                             <h2 className="text-3xl font-bold mb-6 relative z-10">Ready to make your mark?</h2>
                             <p className="text-gray-300 text-lg mb-8 leading-relaxed relative z-10">
@@ -99,7 +99,7 @@ export default function CareersPage() {
 
                             <a
                                 href="mailto:talent@mindssparc.com"
-                                className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-pink-50 transition-all hover:scale-105 shadow-xl shadow-white/10"
+                                className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-all hover:scale-105 shadow-xl shadow-white/10"
                             >
                                 <Mail className="w-5 h-5" />
                                 talent@mindssparc.com

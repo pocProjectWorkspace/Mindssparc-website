@@ -42,7 +42,7 @@ const features = [
 
 export default function SecurePage() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-blue-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -52,21 +52,21 @@ export default function SecurePage() {
                         {/* Abstract Cyber Grid */}
                         <div className="absolute inset-0 opacity-20"
                             style={{
-                                backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                                backgroundImage: 'linear-gradient(rgba(13, 148, 136, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                                 backgroundSize: '40px 40px'
                             }}
                         />
 
                         {/* Radar/Scanner Beam Animation */}
                         <motion.div
-                            className="absolute inset-x-0 h-32 bg-gradient-to-b from-blue-500/0 via-blue-500/10 to-blue-500/0 border-y border-blue-500/20"
+                            className="absolute inset-x-0 h-32 bg-teal-500/10 border-y border-teal-500/20"
                             animate={{ top: ['-10%', '110%'] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                         />
 
                         {/* Glowing Orbs */}
-                        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 rounded-full blur-[100px] animate-pulse" />
-                        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
+                        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-600/20 rounded-full blur-[100px] animate-pulse" />
+                        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
@@ -75,24 +75,23 @@ export default function SecurePage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h1 className="text-sm font-bold text-blue-400 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-400 uppercase tracking-[0.2em] mb-4">
                                 MindsSparc Secure
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight max-w-4xl mx-auto">
                                 Reveal threats <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                                <span className="text-teal-400">
                                     before they strike
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Proactive offensive security to uncover how your systems can be exploited
-                                in real-world scenarios.
+                                Continuous external exposure discovery, validation, and remediation verification, powered by CyberMindr.
                             </p>
 
                             <div className="flex justify-center gap-4">
                                 <Link
                                     href="/contact"
-                                    className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-blue-50 transition-colors flex items-center gap-2"
+                                    className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors flex items-center gap-2"
                                 >
                                     Book a Demo <ArrowRight className="w-5 h-5" />
                                 </Link>
@@ -121,8 +120,8 @@ export default function SecurePage() {
                                         Traditional defensive security measures are no longer sufficient to protect organizations
                                         against AI-enabled attacks, data manipulation, and silent system compromise.
                                     </p>
-                                    <p className="font-semibold text-white border-l-4 border-blue-500 pl-4 py-1">
-                                        In this environment, <span className="text-blue-400">offensive cybersecurity</span> is no longer optional —
+                                    <p className="font-semibold text-white border-l-4 border-teal-500 pl-4 py-1">
+                                        In this environment, <span className="text-teal-400">offensive cybersecurity</span> is no longer optional —
                                         it is essential to think and act like an attacker to uncover how any system can be exploited.
                                     </p>
                                 </div>
@@ -135,11 +134,11 @@ export default function SecurePage() {
                                 transition={{ duration: 0.6 }}
                                 className="relative bg-gray-800 rounded-3xl p-8 border border-white/10 overflow-hidden"
                             >
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
                                 <div className="relative z-10">
                                     <h4 className="text-xl font-bold mb-4">It’s no longer about:</h4>
                                     <p className="text-gray-400 italic mb-8">“How many tools do we have?”</p>
-                                    <h4 className="text-2xl font-bold text-blue-400 mb-4">It is about:</h4>
+                                    <h4 className="text-2xl font-bold text-teal-400 mb-4">It is about:</h4>
                                     <p className="text-white text-3xl font-bold">Proactively protecting what matters.</p>
                                 </div>
                             </motion.div>
@@ -151,7 +150,7 @@ export default function SecurePage() {
                 <section className="py-24 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="max-w-3xl mx-auto text-center mb-16">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/20 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-900/20 border border-teal-500/30 text-teal-400 text-sm font-semibold mb-6">
                                 <Shield className="w-4 h-4" /> Powered by CyberMindr
                             </div>
                             <p className="text-xl text-gray-300 leading-relaxed">
@@ -169,9 +168,9 @@ export default function SecurePage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300"
+                                    className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300"
                                 >
-                                    <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                                    <div className="w-12 h-12 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
                                         <feature.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -185,12 +184,12 @@ export default function SecurePage() {
                 </section>
 
                 {/* Final CTA */}
-                <section className="py-24 bg-gradient-to-b from-gray-950 to-blue-950/20">
+                <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to secure your future?</h2>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 text-white text-lg font-bold rounded-full hover:bg-blue-500 transition-all hover:scale-105 shadow-xl shadow-blue-900/20"
+                            className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white text-lg font-bold rounded-full hover:bg-teal-500 transition-all hover:scale-105 shadow-xl shadow-teal-900/20"
                         >
                             Book a Demo <ArrowRight className="w-5 h-5" />
                         </Link>

@@ -13,8 +13,8 @@ const features = [
         icon: Target
     },
     {
-        title: 'Technology & Digital Hiring',
-        description: 'Specialized recruitment for niche technical roles, from AI architects to cybersecurity experts.',
+        title: 'Specialized Hiring',
+        description: 'Targeted hiring ensuring you find the right fit in competitive markets',
         icon: UserCheck
     },
     {
@@ -31,7 +31,7 @@ const features = [
 
 export default function TalentPage() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-emerald-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -41,14 +41,14 @@ export default function TalentPage() {
                         {/* Interactive Network / People Grid Animation */}
                         <div className="absolute inset-0 opacity-30"
                             style={{
-                                backgroundImage: 'radial-gradient(circle, rgba(16, 185, 129, 0.2) 1px, transparent 1px)',
+                                backgroundImage: 'radial-gradient(circle, rgba(13, 148, 136, 0.2) 1px, transparent 1px)',
                                 backgroundSize: '40px 40px'
                             }}
                         />
 
                         {/* Glowing "Search" Spotlights */}
                         <motion.div
-                            className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-emerald-600/20 rounded-full blur-[100px]"
+                            className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-teal-600/20 rounded-full blur-[100px]"
                             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3], x: [0, 50, 0] }}
                             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                         />
@@ -60,12 +60,12 @@ export default function TalentPage() {
 
                         {/* Connecting Lines Animation (Simulating finding matches) */}
                         <motion.div
-                            className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent"
+                            className="absolute top-0 left-1/4 w-px h-full bg-teal-500/30"
                             animate={{ opacity: [0, 1, 0], top: ['-100%', '100%'] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
                         />
                         <motion.div
-                            className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent"
+                            className="absolute top-0 right-1/4 w-px h-full bg-teal-500/30"
                             animate={{ opacity: [0, 1, 0], top: ['-100%', '100%'] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
                         />
@@ -77,28 +77,23 @@ export default function TalentPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h1 className="text-sm font-bold text-emerald-400 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-400 uppercase tracking-[0.2em] mb-4">
                                 MindsSparc Talent
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight max-w-4xl mx-auto">
                                 Teams that deliver, <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                                <span className="text-teal-400">
                                     not just resumes.
                                 </span>
                             </h2>
-                            <div className="mb-10 flex justify-center">
-                                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-300 text-xs font-semibold tracking-wide uppercase">
-                                    Powered by TekPages
-                                </span>
-                            </div>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Transformation programs stall when hiring cycles stretch. We compress time-to-fill with a proactive pipeline and AI-powered sourcing.
+                                Access a proactive pipeline and end-to-end hiring engine to build high performing teams, powered by Next Gen models.
                             </p>
 
                             <div className="flex justify-center gap-4">
                                 <Link
                                     href="/contact"
-                                    className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-emerald-50 transition-colors flex items-center gap-2"
+                                    className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors flex items-center gap-2"
                                 >
                                     Build Your Team <ArrowRight className="w-5 h-5" />
                                 </Link>
@@ -125,11 +120,11 @@ export default function TalentPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden"
+                                    className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 relative overflow-hidden"
                                 >
 
                                     <div className="relative z-10 border-b border-white/10 pb-6 mb-6">
-                                        <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                        <div className="w-12 h-12 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 mb-4 group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
                                             <feature.icon className="w-6 h-6" />
                                         </div>
                                         <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
@@ -145,12 +140,12 @@ export default function TalentPage() {
                 </section>
 
                 {/* Final CTA */}
-                <section className="py-24 bg-gradient-to-b from-gray-950 to-emerald-950/20">
+                <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8">Stop interviewing mismatched profiles.</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8">Transform Your Hiring</h2>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-600 text-white text-lg font-bold rounded-full hover:bg-emerald-500 transition-all hover:scale-105 shadow-xl shadow-emerald-900/20"
+                            className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white text-lg font-bold rounded-full hover:bg-teal-500 transition-all hover:scale-105 shadow-xl shadow-teal-900/20"
                         >
                             Explore Talent Solutions <ArrowRight className="w-5 h-5" />
                         </Link>

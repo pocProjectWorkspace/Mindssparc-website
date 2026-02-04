@@ -12,7 +12,7 @@ export default function GCCPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-blue-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -22,7 +22,7 @@ export default function GCCPage() {
                         {/* Background Gradient */}
                         <div className="absolute inset-0 opacity-20"
                             style={{
-                                backgroundImage: 'radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                                backgroundImage: 'radial-gradient(circle, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                                 backgroundSize: '40px 40px'
                             }}
                         />
@@ -31,25 +31,25 @@ export default function GCCPage() {
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30">
                             {/* Outer Ring */}
                             <motion.div
-                                className="absolute inset-0 border border-dashed border-blue-500/30 rounded-full"
+                                className="absolute inset-0 border border-dashed border-teal-500/30 rounded-full"
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
                             />
                             {/* Middle Ring */}
                             <motion.div
-                                className="absolute inset-[100px] border border-blue-400/20 rounded-full"
+                                className="absolute inset-[100px] border border-teal-400/20 rounded-full"
                                 animate={{ rotate: -360 }}
                                 transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
                             >
-                                <div className="absolute top-0 left-1/2 w-4 h-4 bg-blue-500 rounded-full blur-[2px] -translate-x-1/2 -translate-y-1/2" />
+                                <div className="absolute top-0 left-1/2 w-4 h-4 bg-teal-500 rounded-full blur-[2px] -translate-x-1/2 -translate-y-1/2" />
                             </motion.div>
                             {/* Inner Ring */}
                             <motion.div
-                                className="absolute inset-[200px] border border-indigo-500/30 rounded-full"
+                                className="absolute inset-[200px] border border-teal-500/30 rounded-full"
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                             >
-                                <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-indigo-400 rounded-full blur-[2px] -translate-x-1/2 translate-y-1/2" />
+                                <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-teal-400 rounded-full blur-[2px] -translate-x-1/2 translate-y-1/2" />
                             </motion.div>
                         </div>
                     </div>
@@ -61,17 +61,17 @@ export default function GCCPage() {
                             transition={{ duration: 0.6 }}
                             className="max-w-4xl"
                         >
-                            <h1 className="text-sm font-bold text-blue-400 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-400 uppercase tracking-[0.2em] mb-4">
                                 Industry Focus
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
                                 Global Capability <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                                <span className="text-teal-400">
                                     Centres
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                From Cost Center to Innovation Hub. We help enterprises establish and mature their GCCs to drive strategic value and global operational excellence.
+                                We help enterprises establish and mature their GCCs to drive strategic value and global operational excellence.
                             </p>
                         </motion.div>
                     </div>
@@ -97,9 +97,9 @@ export default function GCCPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-blue-500/30 transition-all group hover:bg-gray-900/50"
+                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-teal-500/30 transition-all group hover:bg-gray-900/50"
                                 >
-                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/10">
+                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/10">
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
@@ -112,24 +112,24 @@ export default function GCCPage() {
 
                 {/* The Need of the Hour */}
                 <section className="py-24 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-blue-900/5" />
+                    <div className="absolute inset-0 bg-teal-900/5" />
                     <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-blue-400">Value Creation</span></h2>
+                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Value Creation</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                The traditional GCC model focused purely on arbitrage is obsolete. The modern enterprise requires GCCs to be <strong className="text-white">centers of excellence</strong>—driving AI adoption, product innovation, and business resilience.
+                                The traditional GCC model focused purely on arbitrage is obsolete. The modern enterprise requires GCCs to be <strong className="text-white">centers of innovation</strong>—driving AI adoption, product innovation, and business resilience.
                             </p>
                             <ul className="space-y-4">
                                 {["Shift from execution to ownership", "Integration with global agile teams", "Leadership autonomy and accountability"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                                        <CheckCircle className="w-5 h-5 text-blue-500" />
+                                        <CheckCircle className="w-5 h-5 text-teal-500" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="relative h-[500px] w-full bg-gray-900 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 z-10" />
+                            <div className="absolute inset-0 bg-teal-500/10 z-10" />
                             <Image
                                 src="/images/industries/gcc-need.png"
                                 alt="Shared Value Creation"
@@ -147,11 +147,11 @@ export default function GCCPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { title: "Strategic Roadmap", desc: "Defining the GCC maturity curve from setup to scale." },
-                                { title: "Product Operating Model", desc: "Implementing POD-based structures for end-to-end ownership." },
-                                { title: "Cultural Integration", desc: "Bridging the gap between local teams and global culture." },
+                                { title: "Target Operating Model", desc: "Implementing POD-based structures for end-to-end ownership." },
+                                { title: "Operational Excellence", desc: "Metrics-driven governance for sustained performance." },
                                 { title: "Cloud & AI Native", desc: "Building a tech-first foundation for future readiness." },
                                 { title: "Talent Branding", desc: "Positioning the GCC as an employer of choice." },
-                                { title: "Operational Excellence", desc: "Metrics-driven governance for sustained performance." }
+                                { title: "Cultural Integration", desc: "Bridging the gap between local teams and global culture." }
                             ].map((solution, i) => (
                                 <motion.div
                                     key={i}
@@ -161,7 +161,7 @@ export default function GCCPage() {
                                     transition={{ delay: i * 0.05 }}
                                     className="p-8 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors group"
                                 >
-                                    <div className="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mb-6 group-hover:w-16 transition-all duration-300" />
+                                    <div className="w-8 h-1 bg-teal-500 mb-6 group-hover:w-16 transition-all duration-300" />
                                     <h3 className="text-xl font-bold text-white mb-3">{solution.title}</h3>
                                     <p className="text-gray-400">{solution.desc}</p>
                                 </motion.div>
@@ -176,7 +176,7 @@ export default function GCCPage() {
                         <h2 className="text-3xl font-bold mb-6">Ready to transform your Global Capability Centre?</h2>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-blue-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
                         >
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>

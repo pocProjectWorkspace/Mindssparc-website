@@ -60,19 +60,20 @@ export function Header() {
                 className="bg-gray-950/95 backdrop-blur-md border-b border-white/10 relative z-50"
                 onMouseLeave={() => setHoveredNav(null)}
             >
-                <div className="container mx-auto px-6 h-32 flex items-center justify-between">
+                <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center">
-                            <div className="relative h-28 w-auto aspect-[180/40]">
+                        <Link href="/" className="flex items-center gap-3">
+                            <div className="relative h-14 w-14 shrink-0">
                                 <Image
                                     src="/logos/MindsSparc_Logo_Dark.png"
                                     alt="MindsSparc"
                                     fill
-                                    className="object-contain object-left"
+                                    className="object-contain"
                                     priority
                                 />
                             </div>
+                            <span className="text-2xl font-bold text-white tracking-tight">MindsSparc</span>
                         </Link>
                     </div>
 
@@ -142,7 +143,7 @@ export function Header() {
                                         return (
                                             <div key={item.name} className="flex gap-24">
                                                 <div className="w-1/4">
-                                                    <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                                                    <h3 className="text-2xl font-bold mb-4 text-teal-400">
                                                         {item.name}
                                                     </h3>
                                                     <p className="text-gray-500 text-sm leading-relaxed">
@@ -160,7 +161,7 @@ export function Header() {
                                                                     <li key={subItem.name}>
                                                                         <Link
                                                                             href={subItem.href}
-                                                                            className="text-gray-300 hover:text-blue-400 font-medium transition-colors block py-1"
+                                                                            className="text-gray-300 hover:text-teal-400 font-medium transition-colors block py-1"
                                                                         >
                                                                             {subItem.name}
                                                                         </Link>
@@ -179,7 +180,7 @@ export function Header() {
                                         return (
                                             <div key={item.name} className="flex gap-16">
                                                 <div className="w-1/4">
-                                                    <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                                                    <h3 className="text-2xl font-bold mb-4 text-teal-400">
                                                         {item.name}
                                                     </h3>
                                                 </div>
@@ -188,7 +189,7 @@ export function Header() {
                                                         <li key={subItem.name}>
                                                             <Link
                                                                 href={subItem.href}
-                                                                className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-colors block"
+                                                                className="text-lg text-gray-300 hover:text-teal-400 font-medium transition-colors block"
                                                             >
                                                                 {subItem.name}
                                                             </Link>
@@ -207,7 +208,7 @@ export function Header() {
 
             {/* Mobile Menu Backdrop */}
             {mobileMenuOpen && (
-                <div className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-32 px-6 overflow-y-auto">
+                <div className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-24 px-6 overflow-y-auto">
                     <div className="flex flex-col gap-6">
                         {navItems.map((item) => (
                             <div key={item.name} className="border-b border-white/10 pb-4">

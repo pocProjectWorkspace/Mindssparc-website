@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function CookiesPage() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-blue-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -54,10 +54,10 @@ export default function CookiesPage() {
                                 We use cookies for several reasons:
                             </p>
                             <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-300">
-                                <li><strong className="text-blue-400">Essential Cookies:</strong> These are necessary for the website to function properly. They enable basic features like page navigation and access to secure areas.</li>
-                                <li><strong className="text-blue-400">Performance Cookies:</strong> These help us understand how visitors interact with our website by collecting anonymous information.</li>
-                                <li><strong className="text-blue-400">Functional Cookies:</strong> These allow the website to remember choices you make (such as your username, language, or region) to provide enhanced features.</li>
-                                <li><strong className="text-blue-400">Marketing Cookies:</strong> These are used to track visitors across websites to display ads that are relevant and engaging.</li>
+                                <li><strong className="text-teal-400">Essential Cookies:</strong> These are necessary for the website to function properly. They enable basic features like page navigation and access to secure areas.</li>
+                                <li><strong className="text-teal-400">Performance Cookies:</strong> These help us understand how visitors interact with our website by collecting anonymous information.</li>
+                                <li><strong className="text-teal-400">Functional Cookies:</strong> These allow the website to remember choices you make (such as your username, language, or region) to provide enhanced features.</li>
+                                <li><strong className="text-teal-400">Marketing Cookies:</strong> These are used to track visitors across websites to display ads that are relevant and engaging.</li>
                             </ul>
 
                             <h3 className="text-2xl font-bold text-white mb-4">3. Managing Cookies</h3>
@@ -72,7 +72,7 @@ export default function CookiesPage() {
 
                             <h3 className="text-2xl font-bold text-white mb-4">5. Contact Us</h3>
                             <p className="mb-6">
-                                If you have any questions about our use of cookies, please contact us at <a href="mailto:info@mindssparc.com" className="text-blue-400 hover:text-blue-300 transition-colors">privacy@MindsSparc.com</a>.
+                                If you have any questions about our use of cookies, please contact us at <a href="mailto:info@mindssparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">privacy@MindsSparc.com</a>.
                             </p>
                         </div>
                     </div>

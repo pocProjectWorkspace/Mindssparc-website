@@ -72,9 +72,15 @@ export function ServicePillars() {
     return (
         <section className="py-24 bg-gray-950 relative overflow-hidden">
             {/* Background Texture/Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900/50 to-gray-950 pointer-events-none" />
+            <div className="absolute inset-0 bg-gray-900/30 pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">What We Do</h2>
+                    <p className="text-gray-400 text-lg max-w-2xl">
+                        Three integrated practices to secure, transform, and scale your enterprise.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {pillars.map((pillar, index) => (
                         <Link key={pillar.title} href={pillar.href} className="block h-full">
@@ -89,7 +95,7 @@ export function ServicePillars() {
                                     {/* Image Section */}
                                     <div className="relative h-56 w-full overflow-hidden border-b border-white/5">
                                         {/* Image Fallback Gradient */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 z-0" />
+                                        <div className="absolute inset-0 bg-gray-900 z-0" />
 
                                         <Image
                                             src={pillar.image}
@@ -99,7 +105,7 @@ export function ServicePillars() {
                                         />
 
                                         {/* Overlay for icon readability */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-20" />
+                                        <div className="absolute inset-0 bg-gray-900/60 z-20" />
 
                                         <div className="absolute top-4 left-4 z-30 w-10 h-10 bg-black/40 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/10 group-hover:border-white/30 transition-colors">
                                             <pillar.icon className="w-5 h-5 text-white/90" />
@@ -108,9 +114,9 @@ export function ServicePillars() {
 
                                     {/* Content Section */}
                                     <div className="p-8 flex flex-col flex-grow">
-                                        <h3 className="text-sm font-extrabold text-blue-400 mb-3 uppercase tracking-wider">{pillar.title}</h3>
+                                        <h3 className="text-sm font-extrabold text-teal-400 mb-3 uppercase tracking-wider">{pillar.title}</h3>
                                         {/* Added text-balance and slightly adjusted size/leading */}
-                                        <h4 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug whitespace-pre-line group-hover:text-blue-200 transition-colors">
+                                        <h4 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug whitespace-pre-line group-hover:text-teal-200 transition-colors">
                                             {pillar.headline}
                                         </h4>
                                         <p className="text-gray-400 text-sm leading-relaxed flex-grow mb-8 group-hover:text-gray-300 transition-colors">
@@ -118,7 +124,7 @@ export function ServicePillars() {
                                         </p>
 
                                         <div className="mt-auto">
-                                            <span className="text-sm font-semibold text-white group-hover:text-blue-200 transition-colors flex items-center gap-2">
+                                            <span className="text-sm font-semibold text-white group-hover:text-teal-200 transition-colors flex items-center gap-2">
                                                 {pillar.cta}
                                                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                             </span>

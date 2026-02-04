@@ -14,7 +14,7 @@ export default function ManufacturingPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-amber-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -25,7 +25,7 @@ export default function ManufacturingPage() {
                         {/* Abstract Grid */}
                         <div className="absolute inset-0 opacity-20"
                             style={{
-                                backgroundImage: 'linear-gradient(rgba(245, 158, 11, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 158, 11, 0.1) 1px, transparent 1px)',
+                                backgroundImage: 'linear-gradient(rgba(13, 148, 136, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 148, 136, 0.1) 1px, transparent 1px)',
                                 backgroundSize: '40px 40px'
                             }}
                         />
@@ -39,7 +39,7 @@ export default function ManufacturingPage() {
                                         animate={{ x: [0, 100] }}
                                         transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                                     >
-                                        <ChevronRight className="w-24 h-24 text-amber-500" strokeWidth={1} />
+                                        <ChevronRight className="w-24 h-24 text-teal-500" strokeWidth={1} />
                                     </motion.div>
                                 ))}
                             </div>
@@ -53,12 +53,12 @@ export default function ManufacturingPage() {
                             transition={{ duration: 0.6 }}
                             className="max-w-4xl"
                         >
-                            <h1 className="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">
+                            <h1 className="text-sm font-bold text-teal-500 uppercase tracking-[0.2em] mb-4">
                                 Industry Focus
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
                                 Custom <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                                <span className="text-teal-400">
                                     Manufacturing
                                 </span>
                             </h2>
@@ -89,9 +89,9 @@ export default function ManufacturingPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-amber-500/30 transition-all group hover:bg-gray-900/50"
+                                    className="p-8 bg-gray-950 border border-white/10 rounded-2xl hover:border-teal-500/30 transition-all group hover:bg-gray-900/50"
                                 >
-                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform shadow-lg shadow-amber-500/10">
+                                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 text-teal-500 group-hover:scale-110 transition-transform shadow-lg shadow-teal-500/10">
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
@@ -104,24 +104,24 @@ export default function ManufacturingPage() {
 
                 {/* The Need of the Hour */}
                 <section className="py-24 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-amber-900/5" />
+                    <div className="absolute inset-0 bg-teal-900/5" />
                     <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-amber-500">Agility & Resilience</span></h2>
+                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-500">Agility & Resilience</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
                                 Manufacturers must move from reactive firefighting to predictive operations. The <strong className="text-white">Connected Factory</strong> leverages real-time data to optimize production, quality, and maintenance.
                             </p>
                             <ul className="space-y-4">
                                 {["End-to-end supply chain visibility", "IT/OT convergence", "Sustainable production"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                                        <CheckCircle className="w-5 h-5 text-amber-500" />
+                                        <CheckCircle className="w-5 h-5 text-teal-500" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="relative h-[500px] w-full bg-gray-900 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10 z-10" />
+                            <div className="absolute inset-0 bg-teal-500/10 z-10" />
                             <Image
                                 src="/images/industries/manufacturing-need.png"
                                 alt="Agility & Resilience"
@@ -153,7 +153,7 @@ export default function ManufacturingPage() {
                                     transition={{ delay: i * 0.05 }}
                                     className="p-8 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors group"
                                 >
-                                    <div className="w-8 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-6 group-hover:w-16 transition-all duration-300" />
+                                    <div className="w-8 h-1 bg-teal-500 mb-6 group-hover:w-16 transition-all duration-300" />
                                     <h3 className="text-xl font-bold text-white mb-3">{solution.title}</h3>
                                     <p className="text-gray-400">{solution.desc}</p>
                                 </motion.div>
@@ -168,7 +168,7 @@ export default function ManufacturingPage() {
                         <h2 className="text-3xl font-bold mb-6">Ready to build the factory of the future?</h2>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-amber-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
                             Explore Solutions <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>

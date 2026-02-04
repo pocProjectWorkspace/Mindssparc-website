@@ -18,10 +18,10 @@ export function WaveHero() {
 
         // Configuration - Brighter Colors & Thicker Lines
         const waves = [
-            { amplitude: 100, frequency: 0.002, speed: 0.01, color: '#8b5cf6', yOffset: 100 }, // Violet-500 (was deep purple)
-            { amplitude: 150, frequency: 0.003, speed: 0.015, color: '#60a5fa', yOffset: 50 }, // Blue-400 (was blue-500)
-            { amplitude: 80, frequency: 0.004, speed: 0.008, color: '#f472b6', yOffset: 150 }, // Pink-400 (was pink-700)
-            { amplitude: 120, frequency: 0.001, speed: 0.005, color: '#34d399', yOffset: 0 }, // Emerald-400 (was emerald-500)
+            { amplitude: 100, frequency: 0.002, speed: 0.01, color: '#2dd4bf', yOffset: 100 }, // Teal-400
+            { amplitude: 150, frequency: 0.003, speed: 0.015, color: '#14b8a6', yOffset: 50 }, // Teal-500
+            { amplitude: 80, frequency: 0.004, speed: 0.008, color: '#5eead4', yOffset: 150 }, // Teal-300
+            { amplitude: 120, frequency: 0.001, speed: 0.005, color: '#0d9488', yOffset: 0 }, // Teal-600
         ];
 
         const resize = () => {

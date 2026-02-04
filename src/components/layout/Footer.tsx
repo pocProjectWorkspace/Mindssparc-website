@@ -3,10 +3,9 @@ import Image from 'next/image';
 
 const footerLinks = {
     Services: [
-        { name: 'Secure', href: '/services/secure' },
-        { name: 'Intelligence', href: '/services/intelligence' },
-        { name: 'Talent', href: '/services/recruitment' },
-
+        { name: 'MindsSparc Secure', href: '/services/secure' },
+        { name: 'MindsSparc Intelligence', href: '/services/intelligence' },
+        { name: 'MindsSparc Talent', href: '/services/recruitment' },
     ],
     Industries: [
         { name: 'GCC', href: '/industries/gcc' },

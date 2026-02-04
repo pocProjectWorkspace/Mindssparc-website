@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function PrivacyPage() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-blue-500/30">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
 
             <main className="flex-grow pt-32">
@@ -57,10 +57,10 @@ export default function PrivacyPage() {
                                 We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:
                             </p>
                             <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-300">
-                                <li><strong className="text-blue-400">Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-                                <li><strong className="text-blue-400">Contact Data</strong> includes billing address, delivery address, email address and telephone numbers.</li>
-                                <li><strong className="text-blue-400">Technical Data</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, and other technology on the devices you use to access this website.</li>
-                                <li><strong className="text-blue-400">Usage Data</strong> includes information about how you use our website, products and services.</li>
+                                <li><strong className="text-teal-400">Identity Data</strong> includes first name, last name, username or similar identifier.</li>
+                                <li><strong className="text-teal-400">Contact Data</strong> includes billing address, delivery address, email address and telephone numbers.</li>
+                                <li><strong className="text-teal-400">Technical Data</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, and other technology on the devices you use to access this website.</li>
+                                <li><strong className="text-teal-400">Usage Data</strong> includes information about how you use our website, products and services.</li>
                             </ul>
 
                             <h3 className="text-2xl font-bold text-white mb-4">3. How We Use Your Data</h3>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
 
                             <h3 className="text-2xl font-bold text-white mb-4">6. Contact Us</h3>
                             <p className="mb-6">
-                                If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:info@mindssparc.com" className="text-blue-400 hover:text-blue-300 transition-colors">privacy@MindsSparc.com</a>.
+                                If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:info@mindssparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">privacy@MindsSparc.com</a>.
                             </p>
                         </div>
                     </div>

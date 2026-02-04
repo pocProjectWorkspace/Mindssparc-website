@@ -14,7 +14,7 @@ export function Hero() {
             <div className="absolute inset-0 z-0">
                 <WaveHero />
                 {/* Gradient Overlay for Text Readability - Darker on the left */}
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/60 to-gray-950/30" />
+                <div className="absolute inset-0 bg-gray-950/70" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -26,7 +26,7 @@ export function Hero() {
                     >
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
                             Build what’s next <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                            <span className="text-teal-400">
                                 Together
                             </span>
                         </h1>
@@ -38,9 +38,6 @@ export function Hero() {
                             <Link href="/contact" className="group px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                                 Talk to an expert
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                            <Link href="/services" className="px-8 py-4 text-white font-semibold hover:bg-white/10 transition-colors rounded-full border border-white/30 flex items-center justify-center">
-                                Explore our services
                             </Link>
                         </div>
                     </motion.div>

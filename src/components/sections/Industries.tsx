@@ -10,18 +10,18 @@ const industries = [
     {
         id: 'gcc',
         icon: Globe2,
-        title: 'Global Capability Centers (GCC’s)',
+        title: 'Global Capability Center',
         description: 'Strategic hubs for innovation, scaling operations, and driving digital transformation.',
-        color: 'from-blue-600 to-indigo-900',
+        color: 'from-teal-600 to-teal-900',
         image: '/images/industries/gcc.png',
         href: '/industries/gcc'
     },
     {
         id: 'healthcare',
         icon: Stethoscope,
-        title: 'Healthcare & Life Sciences',
+        title: 'Healthcare',
         description: 'Accelerating patient outcomes through data interoperability and AI-driven precision.',
-        color: 'from-emerald-600 to-teal-900',
+        color: 'from-teal-600 to-teal-900',
         image: '/images/industries/healthcare.png',
         href: '/industries/healthcare'
     },
@@ -30,7 +30,7 @@ const industries = [
         icon: Factory,
         title: 'Manufacturing',
         description: 'Industry 4.0 realization with smart factories, predictive maintenance, and supply chain resilience.',
-        color: 'from-orange-600 to-red-900',
+        color: 'from-teal-600 to-teal-900',
         image: '/images/industries/manufacturing.png',
         href: '/industries/manufacturing'
     },
@@ -39,7 +39,7 @@ const industries = [
         icon: GraduationCap,
         title: 'Education',
         description: 'Learning analytics, personalisation, AI tutors, automated grading, and platform modernisation with governance.',
-        color: 'from-violet-600 to-purple-900',
+        color: 'from-teal-600 to-teal-900',
         image: '/images/industries/education.png',
         href: '/industries/education'
     }
@@ -72,7 +72,7 @@ export function Industries() {
                                     }`}
                             >
                                 {/* Background Image & Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${industry.color} z-0 opacity-90 mix-blend-multiply`} />
+                                <div className="absolute inset-0 bg-teal-800 z-0 opacity-90 mix-blend-multiply" />
 
                                 <Image
                                     src={industry.image}
@@ -82,7 +82,7 @@ export function Industries() {
                                 />
 
                                 {/* Dark Gradient Overlay for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10" />
+                                <div className="absolute inset-0 bg-gray-950/50 z-10" />
 
                                 {/* Content */}
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
@@ -99,7 +99,7 @@ export function Industries() {
                                             <p className="text-gray-200 text-lg leading-relaxed mb-6 max-w-xl">
                                                 {industry.description}
                                             </p>
-                                            <Link href={industry.href} className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-blue-300 transition-colors inline-block w-fit">
+                                            <Link href={industry.href} className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-teal-300 transition-colors inline-block w-fit">
                                                 Learn More <ArrowRight className="w-4 h-4" />
                                             </Link>
                                         </motion.div>

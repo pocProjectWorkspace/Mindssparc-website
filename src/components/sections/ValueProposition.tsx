@@ -38,7 +38,7 @@ const MovingBorderCard = ({ children, className = "" }: { children: React.ReactN
         <div className={`relative p-[1px] overflow-hidden rounded-xl bg-gray-900 group ${className}`}>
             {/* Moving Border Gradient */}
             <div className="absolute inset-0 h-full w-full animate-spin-slow [mask-image:linear-gradient(transparent,white)]">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500%] h-[500%] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#3b82f6_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500%] h-[500%] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#0d9488_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
 
             {/* Static Border (fallback/base) */}
@@ -56,7 +56,7 @@ export function ValueProposition() {
     return (
         <section className="py-24 bg-gray-950 relative overflow-hidden text-white">
             {/* Background Texture - dark and subtle */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-gray-950 to-gray-950 pointer-events-none" />
+            <div className="absolute inset-0 bg-teal-900/10 pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -71,7 +71,7 @@ export function ValueProposition() {
                         >
                             <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
                                 A Consulting Partner <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                <span className="text-teal-400">
                                     You Can Trust
                                 </span>
                             </h2>
@@ -81,13 +81,13 @@ export function ValueProposition() {
 
                             <div className="flex items-center gap-4 text-sm text-gray-500 font-medium">
                                 <span className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> Transparent
+                                    <CheckCircle2 className="w-4 h-4 text-teal-500" /> Transparent
                                 </span>
                                 <span className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> Agile
+                                    <CheckCircle2 className="w-4 h-4 text-teal-500" /> Agile
                                 </span>
                                 <span className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> Outcome-Focused
+                                    <CheckCircle2 className="w-4 h-4 text-teal-500" /> Outcome-Focused
                                 </span>
                             </div>
                         </motion.div>
@@ -105,7 +105,7 @@ export function ValueProposition() {
                             >
                                 <MovingBorderCard className="hover:scale-[1.02] transition-transform duration-300">
                                     <div className="flex items-start gap-4">
-                                        <div className="p-3 rounded-lg bg-blue-500/10 text-blue-400">
+                                        <div className="p-3 rounded-lg bg-teal-500/10 text-teal-400">
                                             <benefit.icon className="w-6 h-6" />
                                         </div>
                                         <div>
