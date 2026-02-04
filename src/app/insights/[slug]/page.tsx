@@ -21,19 +21,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     }
 
     return (
-        <div className="min-h-screen flex flex-col font-sans">
+        <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white">
             <Header />
             <main className="flex-grow">
-                {/* We use a custom header or just the PageHeader with article title */}
-                <div className="bg-primary text-primary-foreground pt-32 pb-16">
+                {/* Hero Header */}
+                <div className="bg-gray-950 pt-32 pb-16">
                     <div className="container mx-auto px-6">
-                        <Link href="/insights" className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors">
+                        <Link href="/insights" className="inline-flex items-center gap-2 text-gray-400 hover:text-teal-400 mb-8 transition-colors">
                             <ArrowLeft className="w-4 h-4" /> Back to Insights
                         </Link>
-                        <div className="flex items-center gap-4 text-sm font-semibold text-accent mb-6 uppercase tracking-wider">
+                        <div className="flex items-center gap-4 text-sm font-semibold text-teal-400 mb-6 uppercase tracking-wider">
                             <span>{article.category}</span>
-                            <span>•</span>
-                            <span>{article.readTime}</span>
+                            <span className="text-gray-600">•</span>
+                            <span className="text-gray-400 normal-case">{article.readTime}</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-4xl">
                             {article.title}
@@ -44,10 +44,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     </div>
                 </div>
 
-                <article className="py-16 bg-white">
+                <article className="py-16 bg-gray-950">
                     <div className="container mx-auto px-6 max-w-4xl">
                         {/* Hero Image */}
-                        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden mb-12 shadow-2xl">
+                        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden mb-12 border border-white/10">
                             <Image
                                 src={article.image}
                                 alt={article.title}
@@ -58,11 +58,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                         {/* Content */}
                         <div
-                            className="prose prose-lg max-w-none text-gray-600 prose-headings:text-primary prose-a:text-accent"
+                            className="prose prose-lg prose-invert max-w-none text-gray-300 prose-headings:text-white prose-a:text-teal-400 prose-strong:text-white prose-blockquote:border-teal-500 prose-blockquote:text-gray-400 prose-li:marker:text-teal-500"
                             dangerouslySetInnerHTML={{ __html: article.content }}
                         />
 
-                        <div className="mt-16 pt-8 border-t border-gray-200">
+                        <div className="mt-16 pt-8 border-t border-white/10">
                             <p className="text-sm text-gray-500">Published on {article.date}</p>
                         </div>
                     </div>
