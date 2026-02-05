@@ -56,7 +56,7 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
 
     return (
         <AnimatePresence>
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4">
                 {/* Backdrop */}
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -71,16 +71,16 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                     initial={{ scale: 0.95, opacity: 0, y: 20 }}
                     animate={{ scale: 1, opacity: 1, y: 0 }}
                     exit={{ scale: 0.95, opacity: 0, y: 20 }}
-                    className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden"
+                    className="relative w-[calc(100vw-1.5rem)] sm:w-full sm:max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden"
                 >
                     <button
                         onClick={onClose}
-                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors z-10"
+                        className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors z-10"
                     >
                         <X className="w-5 h-5" />
                     </button>
 
-                    <div className="p-8">
+                    <div className="p-6 sm:p-8">
                         {isSubmitted ? (
                             <div className="text-center py-12">
                                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">

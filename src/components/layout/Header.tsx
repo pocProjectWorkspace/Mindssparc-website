@@ -67,7 +67,7 @@ export function Header() {
                 className="bg-gray-950/95 backdrop-blur-md border-b border-white/10 relative z-50"
                 onMouseLeave={() => setHoveredNav(null)}
             >
-                <div className="container mx-auto px-6 h-28 flex items-center justify-between">
+                <div className="container mx-auto px-4 sm:px-6 h-28 flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
@@ -178,7 +178,7 @@ export function Header() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-24 px-6 overflow-y-auto"
+                        className="md:hidden fixed inset-0 z-40 bg-gray-950 pt-24 px-4 sm:px-6 overflow-y-auto"
                     >
                         <div className="flex flex-col gap-2">
                             {navItems.map((item) => (
