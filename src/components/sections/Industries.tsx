@@ -29,7 +29,7 @@ const industries = [
         id: 'manufacturing',
         icon: Factory,
         title: 'Manufacturing',
-        description: 'Industry 4.0 realization with smart factories, predictive maintenance, and supply chain resilience.',
+        description: 'Manufacturers must move from reactive firefighting to predictive operations. Modern factories leverage real-time data to optimize production, quality, and maintenance.',
         color: 'from-teal-600 to-teal-900',
         image: '/images/industries/manufacturing.png',
         href: '/industries/manufacturing'

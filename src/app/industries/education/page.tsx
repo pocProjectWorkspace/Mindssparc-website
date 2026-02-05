@@ -3,7 +3,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
-import { GraduationCap, BookOpen, Lightbulb, UserCheck, ArrowRight, CheckCircle, School } from 'lucide-react';
+import {BookOpen, UserCheck, ArrowRight, CheckCircle, School } from 'lucide-react';
 import Image from 'next/image';
 
 export default function EducationPage() {
@@ -58,7 +58,6 @@ export default function EducationPage() {
                             className="max-w-4xl"
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-full border border-teal-500/20 text-teal-500 text-sm font-bold uppercase tracking-widest mb-6">
-                                <GraduationCap className="w-4 h-4" />
                                 Industry Focus
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
