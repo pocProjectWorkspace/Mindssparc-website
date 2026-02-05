@@ -140,7 +140,7 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                                         </>
                                                     )}
 
-                                                    {(defaultService === 'Healthcare' || defaultService === 'Healthcare & Life Sciences') && (
+                                                    {(defaultService === 'Healthcare' || defaultService === 'Healthcare') && (
                                                         <>
                                                             <option value="interoperability">Improve data interoperability</option>
                                                             <option value="patient_experience">Enhance patient experience</option>
@@ -149,7 +149,7 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                                         </>
                                                     )}
 
-                                                    {(defaultService === 'Manufacturing' || defaultService === 'Custom Manufacturing') && (
+                                                    {(defaultService === 'Manufacturing' || defaultService === 'Manufacturing') && (
                                                         <>
                                                             <option value="smart_factory">Implement Smart Factory / IoT</option>
                                                             <option value="supply_chain">Optimize supply chain resilience</option>

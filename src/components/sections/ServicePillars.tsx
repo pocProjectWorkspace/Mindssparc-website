@@ -78,7 +78,7 @@ export function ServicePillars() {
                 <div className="mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">What We Do</h2>
                     <p className="text-gray-400 text-lg max-w-2xl">
-                        Three integrated practices to secure, transform, and scale your enterprise.
+                    We focus on providing solutions to secure, transform and scale your enterprise.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

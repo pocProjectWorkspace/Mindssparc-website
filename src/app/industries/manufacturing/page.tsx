@@ -57,13 +57,12 @@ export default function ManufacturingPage() {
                                 Industry Focus
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
-                                Custom <br className="hidden md:block" />
                                 <span className="text-teal-400">
                                     Manufacturing
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Building the Intelligent, Resilient Factory of the Future. We help manufacturers navigate Industry 4.0, bridging the gap between physical operations and digital intelligence.
+                                Building the Intelligent, Resilient Factory of the Future. We help manufacturers navigate Industry X.0, bridging the gap between physical operations and digital intelligence.
                             </p>
                         </motion.div>
                     </div>
@@ -109,10 +108,10 @@ export default function ManufacturingPage() {
                         <div>
                             <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-500">Agility & Resilience</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                Manufacturers must move from reactive firefighting to predictive operations. The <strong className="text-white">Connected Factory</strong> leverages real-time data to optimize production, quality, and maintenance.
+                                Manufacturers must move from reactive firefighting to predictive operations. Modern factories leverage real-time data to optimize production, quality, and maintenance.
                             </p>
                             <ul className="space-y-4">
-                                {["End-to-end supply chain visibility", "IT/OT convergence", "Sustainable production"].map((item, i) => (
+                                {["End-to-end supply chain visibility", "IT/OT convergence", "Data driven decision making", "Cybersecurity"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
                                         <CheckCircle className="w-5 h-5 text-teal-500" />
                                         {item}
@@ -136,14 +135,12 @@ export default function ManufacturingPage() {
                 <section className="py-24 bg-gray-900/50">
                     <div className="container mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-16 text-center">The MindsSparc Approach</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {[
-                                { title: "Digital Twins", desc: "Simulating production lines to optimize performance before deployment." },
-                                { title: "Predictive Maintenance", desc: "AI-driven insights to prevent equipment failure." },
-                                { title: "Smart Supply Chain", desc: "Blockchain and IoT for real-time tracking and transparency." },
-                                { title: "Connected Worker", desc: "AR/VR tools to empower frontline employees." },
-                                { title: "Sustainability Tech", desc: "Monitoring and reducing carbon footprint and waste." },
-                                { title: "ERP Modernization", desc: "Migrating legacy core systems to the cloud." }
+                                { title: "Smart Supply Chain", desc: "Leverage AI to predict demand, manage inventory and streamline logistics." },
+                                { title: "Predictive Maintenance", desc: "AI-driven insights to prevent breakdowns and minimise production disruption." },
+                                { title: "Digital Manufacturing", desc: "Build intelligent workflows to drive process efficiencies and optimise operations." },
+                                { title: "Data Driven Insights", desc: "Convert manufacturing data into strategic insights to anticipate risks, optimize decisions, and continuously improve performance." }
                             ].map((solution, i) => (
                                 <motion.div
                                     key={i}
