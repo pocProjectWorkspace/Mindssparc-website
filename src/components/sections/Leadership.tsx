@@ -17,23 +17,26 @@ interface LeaderProfile {
 const leaders: LeaderProfile[] = [
     {
         name: 'Lakshmi Nair',
-        role: 'Director',
-        headline: 'Enterprise transformation leader, SAP and business modernisation.',
+        role: 'Co-Founder',
+        headline: 'Enterprise transformation leader with three decades of global consulting experience.',
         image: '/images/Lakshmi%20Nair.png',
         bio: [
-            'Lakshmi is an accomplished consulting leader with experience as an Executive Partner and SAP Service Area Lead (India/South Asia), driving large-scale transformation programs and executive stakeholder agendas. She brings a practical lens on how cloud, data, and operating-model change land inside complex organisations.'
+            'An accomplished leader with over three decades of Global consulting experience. Lakshmi has successfully led multi-cultural global teams driving complex digital transformations across industries including Utilities, Energy Services, Retail, Automotive, Consumer goods.',
+            'She has held prominent leadership roles including Managing Director at Accenture (UK and Global) and Executive Partner at IBM (Europe and India/South Asia). Known for her expertise in Customer Experience across CRM and ERP Solutions and various technologies (SAP, Salesforce, Adobe), her core strength lies in Client Stakeholder engagement, Business transformation and building high performance teams.',
+            'She brings a practical lens on how technology can help organisation simplify their complex business operations.'
         ],
-        focusAreas: ['SAP transformation', 'Operating model change', 'Enterprise platforms', 'Value realisation']
+        focusAreas: ['Customer Experience', 'Business Transformation', 'CRM & ERP Solutions', 'Client Stakeholder Engagement']
     },
     {
         name: 'Rajesh Parameswaran',
-        role: 'Director',
-        headline: 'Industry 4.0 and AI transformation across core industries.',
+        role: 'Co-Founder',
+        headline: 'Transformational leader at the intersection of technology and industry.',
         image: '/images/Rajesh%20Parameswaran.png',
         bio: [
-            'Rajesh has served as Executive Director and Industrial Sector Leader (India/South Asia), with a strong focus on how AI and Industry 4.0 reshape manufacturing and industrial enterprises, including MSME enablement, analytics adoption, and responsible AI thinking.'
+            'A transformational leader with over three decades of experience working at the intersection of technology and industry. Rajesh has a strong focus on how AI and Industry X.0 reshape manufacturing and industrial enterprises. His leadership style is focussed on building high performance teams and a collaborative partner ecosystem.',
+            'Rajesh has held several senior leadership positions including Executive Director IBM India/South Asia and Strategic Engagement Leader at Hewlett Packard Enterprise. In his capacity as the Industrial and Distribution Sector Leader at IBM Consulting, he drove large-scale enterprise initiatives in Consulting, Strategic Outsourcing and Business Transformation across multiple industries viz Manufacturing, Automotive, Consumer Goods, Retail, Real Estate & Infrastructure.'
         ],
-        focusAreas: ['Industrial AI', 'Strategy-to-execution transformation', 'Industry 4.0', 'Responsible AI']
+        focusAreas: ['Industrial AI', 'Industry X.0', 'Business Transformation', 'Partner Ecosystem']
     }
 ];
 
