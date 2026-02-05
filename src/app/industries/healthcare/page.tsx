@@ -62,13 +62,12 @@ export default function HealthcarePage() {
                                 Industry Focus
                             </h1>
                             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
-                                Healthcare & <br className="hidden md:block" />
                                 <span className="text-teal-400">
-                                    Life Sciences
+                                    Healthcare
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Empowering providers and payers to unlock the power of data, improve patient outcomes, and navigate complex regulatory landscapes.
+                                Building a connected care ecosystem for the neurodivergent community — bridging families, therapists, and technology to enable early identification, continuous monitoring, and personalized intervention.
                             </p>
                         </motion.div>
                     </div>
@@ -79,14 +78,14 @@ export default function HealthcarePage() {
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold mb-4">The Industry Challenge</h2>
-                            <p className="text-gray-400">Balancing care with compliance and cost.</p>
+                            <p className="text-gray-400">Supporting neurodivergent individuals demands more than fragmented care.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Data Silos", desc: "Fragmented patient information across disparate systems.", icon: Database },
-                                { title: "Regulatory Pressure", desc: "Navigating HIPAA, GDPR, and evolving compliance mandates.", icon: Shield },
-                                { title: "Rising Costs", desc: "The imperative to reduce operational overhead while improving care.", icon: Activity }
+                                { title: "Fragmented Care Journeys", desc: "Families navigate disconnected systems of therapists, schools, and specialists with no unified view of their child's progress.", icon: Database },
+                                { title: "Delayed Identification", desc: "Limited access to standardized developmental screening means neurodivergent traits are often identified too late for early intervention.", icon: Shield },
+                                { title: "Therapist Overload", desc: "Clinicians spend more time on manual documentation and administrative tasks than on actual patient care and intervention.", icon: Activity }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -121,12 +120,12 @@ export default function HealthcarePage() {
                             />
                         </div>
                         <div className="order-1 lg:order-2">
-                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Interoperability</span></h2>
+                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Connected Care</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                The future of healthcare is connected. Systems must talk to each other to provide a <strong className="text-white">longitudinal patient view</strong>, enabling preventative care and personalized treatment plans.
+                                The future of neurodivergent care is connected. Families, therapists, and support systems must work together through a unified platform — enabling early screening, AI-powered insights, and continuous progress tracking to deliver truly <strong className="text-white">personalized care pathways</strong>.
                             </p>
                             <ul className="space-y-4">
-                                {["Seamless data exchange", "Real-time analytics", "Secure telehealth platforms"].map((item, i) => (
+                                {["AI-powered developmental screening and progress monitoring", "Unified case management across multidisciplinary teams", "Data-driven insights that turn observations into actionable intervention plans"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
                                         <CheckCircle className="w-5 h-5 text-teal-500" />
                                         {item}
