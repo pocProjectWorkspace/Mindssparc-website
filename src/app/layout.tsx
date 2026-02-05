@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'MindsSparc | Enterprise Consulting',
-  description: 'Global strategic consulting firm specializing in security, intelligence, and search.',
+  description: 'Global strategic consulting firm specializing in security, intelligence, and talent.',
 };
 
 export default function RootLayout({
