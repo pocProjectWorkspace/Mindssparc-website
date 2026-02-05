@@ -1,11 +1,46 @@
 'use client';
 
+import { useState } from 'react';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
-import { Mail, Send } from 'lucide-react';
+import { Mail, Send, CheckCircle, Loader2 } from 'lucide-react';
 
 export default function ContactPage() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMsg, setErrorMsg] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('loading');
+        setErrorMsg('');
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || 'Something went wrong.');
+            }
+
+            setStatus('success');
+            setFormData({ firstName: '', lastName: '', email: '', message: '' });
+        } catch (err) {
+            setStatus('error');
+            setErrorMsg(err instanceof Error ? err.message : 'Failed to send message.');
+        }
+    };
+
     return (
         <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
@@ -44,7 +79,7 @@ export default function ContactPage() {
                                     Let's <span className="text-teal-400">Talk.</span>
                                 </h1>
                                 <p className="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
-                                    Whether you’re exploring a new initiative or navigating a complex challenge, we’re here to help you build what's next.
+                                    Whether you're exploring a new initiative or navigating a complex challenge, we're here to help you build what's next.
                                 </p>
 
                                 <div className="space-y-8">
@@ -69,32 +104,89 @@ export default function ContactPage() {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 className="bg-gray-900/50 backdrop-blur-sm p-8 md:p-10 rounded-3xl shadow-2xl border border-white/10"
                             >
-                                <form className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-semibold text-gray-400">First Name</label>
-                                            <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none" placeholder="Jane" />
+                                {status === 'success' ? (
+                                    <div className="text-center py-12">
+                                        <div className="w-16 h-16 bg-teal-500/20 text-teal-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <CheckCircle className="w-8 h-8" />
                                         </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-semibold text-gray-400">Last Name</label>
-                                            <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none" placeholder="Doe" />
+                                        <h3 className="text-2xl font-bold text-white mb-2">Message Sent</h3>
+                                        <p className="text-gray-400 mb-8">
+                                            Thank you for reaching out. Our team will get back to you within 24 hours.
+                                        </p>
+                                        <button
+                                            onClick={() => setStatus('idle')}
+                                            className="px-6 py-3 bg-white text-gray-950 font-semibold rounded-full hover:bg-teal-50 transition-colors"
+                                        >
+                                            Send Another Message
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <form onSubmit={handleSubmit} className="space-y-6">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div className="space-y-2">
+                                                <label className="text-sm font-semibold text-gray-400">First Name</label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={formData.firstName}
+                                                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none"
+                                                    placeholder="Jane"
+                                                />
+                                            </div>
+                                            <div className="space-y-2">
+                                                <label className="text-sm font-semibold text-gray-400">Last Name</label>
+                                                <input
+                                                    type="text"
+                                                    value={formData.lastName}
+                                                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none"
+                                                    placeholder="Doe"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-400">Work Email</label>
-                                        <input type="email" className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none" placeholder="jane@company.com" />
-                                    </div>
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-semibold text-gray-400">Work Email</label>
+                                            <input
+                                                type="email"
+                                                required
+                                                value={formData.email}
+                                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none"
+                                                placeholder="jane@company.com"
+                                            />
+                                        </div>
 
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-400">Message</label>
-                                        <textarea rows={4} className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none resize-none" placeholder="Tell us about your project..."></textarea>
-                                    </div>
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-semibold text-gray-400">Message</label>
+                                            <textarea
+                                                rows={4}
+                                                required
+                                                value={formData.message}
+                                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                className="w-full px-4 py-3 rounded-xl bg-gray-950/50 border border-white/10 text-white placeholder-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all outline-none resize-none"
+                                                placeholder="Tell us about your project..."
+                                            ></textarea>
+                                        </div>
 
-                                    <button className="w-full px-8 py-4 bg-white text-gray-950 text-lg font-bold rounded-xl hover:bg-teal-50 hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-white/5 flex items-center justify-center gap-2">
-                                        Send Message <Send className="w-5 h-5" />
-                                    </button>
-                                </form>
+                                        {status === 'error' && (
+                                            <p className="text-red-400 text-sm">{errorMsg}</p>
+                                        )}
+
+                                        <button
+                                            type="submit"
+                                            disabled={status === 'loading'}
+                                            className="w-full px-8 py-4 bg-white text-gray-950 text-lg font-bold rounded-xl hover:bg-teal-50 hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-white/5 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                        >
+                                            {status === 'loading' ? (
+                                                <>Sending... <Loader2 className="w-5 h-5 animate-spin" /></>
+                                            ) : (
+                                                <>Send Message <Send className="w-5 h-5" /></>
+                                            )}
+                                        </button>
+                                    </form>
+                                )}
                             </motion.div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, CheckCircle, ChevronRight, ArrowRight } from 'lucide-react';
+import { X, CheckCircle, ChevronRight, ArrowRight, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ConsultationModalProps {
@@ -21,17 +21,37 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
         message: ''
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
 
     if (!isOpen) return null;
 
     const handleNext = () => setStep(step + 1);
     const handleBack = () => setStep(step - 1);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send data to an API
-        console.log('Form Submitted:', formData);
-        setIsSubmitted(true);
+        setIsLoading(true);
+        setErrorMsg('');
+
+        try {
+            const res = await fetch('/api/consultation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || 'Something went wrong.');
+            }
+
+            setIsSubmitted(true);
+        } catch (err) {
+            setErrorMsg(err instanceof Error ? err.message : 'Failed to send request.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -253,12 +273,17 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                         No obligation. A member of our team will review and respond.
                                     </p>
 
+                                    {errorMsg && (
+                                        <p className="text-red-500 text-sm text-center mb-3">{errorMsg}</p>
+                                    )}
+
                                     <div className="flex items-center justify-between">
                                         {step > 1 ? (
                                             <button
                                                 type="button"
                                                 onClick={handleBack}
-                                                className="px-6 py-3 text-sm font-semibold text-gray-600 hover:text-primary transition-colors"
+                                                disabled={isLoading}
+                                                className="px-6 py-3 text-sm font-semibold text-gray-600 hover:text-primary transition-colors disabled:opacity-50"
                                             >
                                                 Back
                                             </button>
@@ -277,9 +302,14 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                         ) : (
                                             <button
                                                 type="submit"
-                                                className="px-8 py-3 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl"
+                                                disabled={isLoading}
+                                                className="px-8 py-3 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
                                             >
-                                                Submit Request
+                                                {isLoading ? (
+                                                    <>Submitting... <Loader2 className="w-4 h-4 animate-spin" /></>
+                                                ) : (
+                                                    'Submit Request'
+                                                )}
                                             </button>
                                         )}
                                     </div>
