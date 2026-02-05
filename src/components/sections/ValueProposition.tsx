@@ -22,7 +22,7 @@ const benefits = [
     },
     {
         title: "Measurable Impact",
-        description: "We focus on outcomes that matter—measurable business impact and efficiency.",
+        description: "We focus on outcomes that matter, measurable business impact and efficiency.",
         icon: Target
     },
     {

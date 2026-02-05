@@ -20,7 +20,7 @@ export default function AutomotivePage() {
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 The automotive industry is undergoing a paradigm shift towards electrification, connectivity, and autonomy.
                                 Our AI solutions help automotive leaders stay ahead by integrating intelligence into every layer of the
-                                value chain—from the factory floor to the driver's seat.
+                                value chain, from the factory floor to the driver's seat.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 We specialize in predictive maintenance models that reduce downtime, computer vision systems for quality control,

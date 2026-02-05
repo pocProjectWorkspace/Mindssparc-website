@@ -67,7 +67,7 @@ export default function HealthcarePage() {
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Building a connected care ecosystem for the neurodivergent community — bridging families, therapists, and technology to enable early identification, continuous monitoring, and personalized intervention.
+                                Building a connected care ecosystem for the neurodivergent community, bridging families, therapists, and technology to enable early identification, continuous monitoring, and personalized intervention.
                             </p>
                         </motion.div>
                     </div>
@@ -122,7 +122,7 @@ export default function HealthcarePage() {
                         <div className="order-1 lg:order-2">
                             <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Connected Care</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                The future of neurodivergent care is connected. Families, therapists, and support systems must work together through a unified platform — enabling early screening, AI-powered insights, and continuous progress tracking to deliver truly <strong className="text-white">personalized care pathways</strong>.
+                                The future of neurodivergent care is connected. Families, therapists, and support systems must work together through a unified platform, enabling early screening, AI-powered insights, and continuous progress tracking to deliver truly <strong className="text-white">personalized care pathways</strong>.
                             </p>
                             <ul className="space-y-4">
                                 {["AI-powered developmental screening and progress monitoring", "Unified case management across multidisciplinary teams", "Data-driven insights that turn observations into actionable intervention plans"].map((item, i) => (

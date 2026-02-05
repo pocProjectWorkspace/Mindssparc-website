@@ -23,7 +23,7 @@ export default function EducationPage() {
                                 institutions deploy AI that fosters engagement and improves learning outcomes.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Beyond the classroom, our solutions assist with administrative efficiency—automating grading,
+                                Beyond the classroom, our solutions assist with administrative efficiency, automating grading,
                                 predicting enrollment trends, and optimizing campus resources.
                             </p>
                         </div>

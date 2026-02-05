@@ -121,7 +121,7 @@ export default function SecurePage() {
                                         against AI-enabled attacks, data manipulation, and silent system compromise.
                                     </p>
                                     <p className="font-semibold text-white border-l-4 border-teal-500 pl-4 py-1">
-                                        In this environment, <span className="text-teal-400">offensive cybersecurity</span> is no longer optional —
+                                        In this environment, <span className="text-teal-400">offensive cybersecurity</span> is no longer optional,
                                         it is essential to think and act like an attacker to uncover how any system can be exploited.
                                     </p>
                                 </div>

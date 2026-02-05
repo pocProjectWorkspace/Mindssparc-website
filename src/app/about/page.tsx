@@ -154,7 +154,7 @@ export default function AboutPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold text-teal-400 mb-6 relative z-10">Our Mission</h2>
                                 <p className="text-xl text-gray-300 leading-relaxed relative z-10">
-                                    To deliver secure, intelligent, and industry-contextual solutions that unlock measurable value—powered by deep domain expertise, innovative thinking, and an unwavering commitment to supporting organizations as they accelerate transformation.
+                                    To deliver secure, intelligent, and industry-contextual solutions that unlock measurable value, powered by deep domain expertise, innovative thinking, and an unwavering commitment to supporting organizations as they accelerate transformation.
                                 </p>
                             </motion.div>
                         </div>

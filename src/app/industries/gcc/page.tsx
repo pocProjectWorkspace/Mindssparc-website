@@ -117,7 +117,7 @@ export default function GCCPage() {
                         <div>
                             <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Value Creation</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                The traditional GCC model focused purely on arbitrage is obsolete. The modern enterprise requires GCCs to be <strong className="text-white">centers of innovation</strong>—driving AI adoption, product innovation, and business resilience.
+                                The traditional GCC model focused purely on arbitrage is obsolete. The modern enterprise requires GCCs to be <strong className="text-white">centers of innovation</strong>, driving AI adoption, product innovation, and business resilience.
                             </p>
                             <ul className="space-y-4">
                                 {["Shift from execution to ownership", "Integration with global agile teams", "Leadership autonomy and accountability"].map((item, i) => (

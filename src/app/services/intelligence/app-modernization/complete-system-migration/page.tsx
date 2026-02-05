@@ -23,7 +23,7 @@ export default function CompleteSystemMigrationPage() {
                                 moving your entire IT ecosystem to a modern, microservices-based, and AI-first architecture.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                We manage the entire lifecycle of this transformation—from auditing your current stack and designing the
+                                We manage the entire lifecycle of this transformation, from auditing your current stack and designing the
                                 target architecture to executing the migration and training your team. The result is an agile, resilient,
                                 and intelligent system ready for the next decade of innovation.
                             </p>

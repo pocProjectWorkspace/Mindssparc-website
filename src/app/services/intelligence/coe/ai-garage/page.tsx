@@ -47,7 +47,7 @@ export default function AiGaragePage() {
                             <h2 className="text-3xl font-bold text-primary mb-6">From Idea to Impact</h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 The AI Garage is our proven methodology for accelerating AI adoption. It addresses the common pitfalls of
-                                AI projects—lack of focus, data issues, and skills gaps—by providing a structured yet flexible framework
+                                AI projects, lack of focus, data issues, and skills gaps, by providing a structured yet flexible framework
                                 for delivery.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed">
