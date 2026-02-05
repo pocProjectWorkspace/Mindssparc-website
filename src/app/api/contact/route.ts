@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         }
 
         await resend.emails.send({
-            from: 'MindsSparc Website <onboarding@resend.dev>',
+            from: 'MindsSparc Website <noreply@mindssparc.com>',
             to: 'contact@mindssparc.com',
             replyTo: email,
             subject: `New Contact Inquiry from ${firstName} ${lastName || ''}`.trim(),
