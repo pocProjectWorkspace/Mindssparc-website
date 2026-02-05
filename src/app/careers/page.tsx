@@ -98,11 +98,11 @@ export default function CareersPage() {
                             </p>
 
                             <a
-                                href="mailto:info@mindssparc.com"
+                                href="mailto:contact@mindssparc.com"
                                 className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-all hover:scale-105 shadow-xl shadow-white/10"
                             >
                                 <Mail className="w-5 h-5" />
-                                info@mindssparc.com
+                                contact@mindssparc.com
                             </a>
                         </div>
                     </div>

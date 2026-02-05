@@ -81,7 +81,7 @@ export default function TermsPage() {
 
                             <h3 className="text-2xl font-bold text-white mb-4">6. Contact Us</h3>
                             <p className="mb-6">
-                                In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:info@MindsSparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">info@mindssparc.com</a>.
+                                In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:contact@mindssparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">contact@mindssparc.com</a>.
                             </p>
                         </div>
                     </div>

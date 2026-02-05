@@ -88,7 +88,7 @@ export default function PrivacyPage() {
 
                             <h3 className="text-2xl font-bold text-white mb-4">6. Contact Us</h3>
                             <p className="mb-6">
-                                If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:info@mindssparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">privacy@MindsSparc.com</a>.
+                                If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:contact@mindssparc.com" className="text-teal-400 hover:text-teal-300 transition-colors">contact@mindssparc.com</a>.
                             </p>
                         </div>
                     </div>

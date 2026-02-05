@@ -41,8 +41,8 @@ export async function POST(req: Request) {
     - Education: Personalized Learning, EdTech Platforms, Student Analytics.
 
     4. CONTACT:
-    - Email: info@mindssparc.com
-    - Legal/Privacy inquiries: privacy@mindssparc.com
+    - Email: contact@mindssparc.com
+    - Legal/Privacy inquiries: contact@mindssparc.com
     - Careers: careers page.
 
     GUIDELINES:
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     - If asked about pricing, ask them to contact us for a tailored quote.
     - If asked about specific technologies, mention we work with leading cloud/AI providers but focus on the *solution* not just the tool.
     - Always strictly STRICTLY answer from the context provided above.
-    - If you strictly don't know the answer, politely ask them to contact info@mindssparc.com.
+    - If you strictly don't know the answer, politely ask them to contact contact@mindssparc.com.
   `;
 
     console.log("Chat API: Streaming response initiating...");
