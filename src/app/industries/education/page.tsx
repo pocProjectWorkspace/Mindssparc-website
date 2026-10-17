@@ -186,7 +186,7 @@ export default function EducationPage() {
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-900/20 border border-teal-500/30 text-teal-400 text-sm font-semibold mb-6">
                                     <School className="w-4 h-4" /> Case Study
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4">EduCore: a student information system for a school in France</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4">EduCore: AI Native student information system</h2>
                                 <p className="text-lg text-gray-300 leading-relaxed mb-8">
                                     MindsSparc built EduCore, a school management and student information platform that brings students, staff and day-to-day school operations together on one dashboard.
                                 </p>
