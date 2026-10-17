@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
 // import Image from 'next/image'; // Unused now
 import { WaveHero } from '@/components/ui/WaveHero';
 
@@ -35,10 +35,10 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Link href="/contact" className="group px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                            <ConsultationButton source="Home — Talk to an expert" className="group px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                                 Talk to an expert
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            </ConsultationButton>
                         </div>
                     </motion.div>
                 </div>

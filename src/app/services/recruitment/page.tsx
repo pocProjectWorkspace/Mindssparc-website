@@ -3,7 +3,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ArrowRight, Users, Briefcase, Search, Lightbulb, Target, UserCheck } from 'lucide-react';
-import Link from 'next/link';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -91,12 +91,13 @@ export default function TalentPage() {
                             </p>
 
                             <div className="flex justify-center gap-4">
-                                <Link
-                                    href="/contact"
+                                <ConsultationButton
+                                    service="Recruitment"
+                                    source="Talent — Explore Talent"
                                     className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors flex items-center gap-2"
                                 >
                                     Build Your Team <ArrowRight className="w-5 h-5" />
-                                </Link>
+                                </ConsultationButton>
                             </div>
                         </motion.div>
                     </div>
@@ -143,12 +144,13 @@ export default function TalentPage() {
                 <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-5xl font-bold mb-8">Transform Your Hiring</h2>
-                        <Link
-                            href="/contact"
+                        <ConsultationButton
+                            service="Recruitment"
+                            source="Talent — Explore Talent"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white text-lg font-bold rounded-full hover:bg-teal-500 transition-all hover:scale-105 shadow-xl shadow-teal-900/20"
                         >
                             Explore Talent Solutions <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </ConsultationButton>
                     </div>
                 </section>
             </main>

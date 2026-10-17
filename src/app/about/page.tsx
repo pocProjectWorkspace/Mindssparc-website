@@ -138,7 +138,7 @@ export default function AboutPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold text-teal-400 mb-6 relative z-10">Our Vision</h2>
                                 <p className="text-xl text-gray-300 leading-relaxed relative z-10">
-                                    To foster a trusted relationship in every client interaction while helping build the enterprise of tomorrow on the foundation of resilient, secure, and intelligent technologies.
+                                    Enterprises that are secure by design, intelligent by default, and powered by the right people.
                                 </p>
                             </motion.div>
 
@@ -154,7 +154,7 @@ export default function AboutPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold text-teal-400 mb-6 relative z-10">Our Mission</h2>
                                 <p className="text-xl text-gray-300 leading-relaxed relative z-10">
-                                    To deliver secure, intelligent, and industry-contextual solutions that unlock measurable value, powered by deep domain expertise, innovative thinking, and an unwavering commitment to supporting organizations as they accelerate transformation.
+                                    We help organisations reduce risk, put AI to work and build high-performing teams. We bring consulting depth, industry context and AI-native solutions, and we measure success by the outcomes our clients achieve.
                                 </p>
                             </motion.div>
                         </div>
