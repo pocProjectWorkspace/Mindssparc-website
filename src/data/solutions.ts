@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Gauge, Hammer, HeartHandshake, type LucideIcon } from 'lucide-react';
+import { Briefcase, GraduationCap, Gauge, Hammer, HeartHandshake, School, type LucideIcon } from 'lucide-react';
 
 export interface Solution {
     slug: string; // Anchor id on /solutions
@@ -12,7 +12,7 @@ export interface Solution {
     externalUrl?: string;
 }
 
-// Flip to true once all five videos are uploaded, so the page looks uniform
+// Flip to true once every solution video is uploaded, so the page looks uniform
 export const SHOW_SOLUTION_VIDEOS = false;
 
 export const UPLLYFT_URL = 'https://upllyft.com';
@@ -57,6 +57,16 @@ export const solutions: Solution[] = [
         highlights: ['Runs in your AWS, Azure or GCP tenant', 'Zero content egress', 'Your Git as the system of record'],
         icon: Hammer,
         video: '/videos/forge.mp4',
+    },
+    {
+        slug: 'educore',
+        name: 'EduCore',
+        tagline: 'An AI-native student information system for schools.',
+        description:
+            'EduCore brings students, staff and day-to-day school operations together on one dashboard. Built and delivered end to end by MindsSparc, it gives school leaders a single, unified view of their institution.',
+        highlights: ['One dashboard for school administration', 'Unified student records', 'Built and delivered end to end by MindsSparc'],
+        icon: School,
+        video: '/videos/educore.mp4',
     },
     {
         slug: 'upllyft',
