@@ -1,16 +1,39 @@
 'use client';
 
-import { useState } from 'react';
-import { ConsultationModal } from '@/components/ui/ConsultationModal';
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
-import { Activity, Heart, Shield, Database, ArrowRight, CheckCircle, Smartphone, Users, Briefcase } from 'lucide-react';
-import { GraduationCap, Wallet, HandHeart, Laptop } from 'lucide-react'; // Adding missing icons
+import { ArrowRight, CheckCircle, Compass, ClipboardList, Users, MessageCircle, Layers, School, ExternalLink, HeartHandshake } from 'lucide-react';
 import Image from 'next/image';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
+import { UPLLYFT_URL } from '@/data/solutions';
+
+// Content aligned with upllyft.com — Upllyft is MindsSparc's healthcare initiative
+const audiences = [
+    {
+        title: "Compass",
+        audience: "For neurodivergent people and families",
+        desc: "Guidance and community in one place. A school meeting, a difficult transition, a small change that made the morning easier: share experiences, ask questions and learn from one another.",
+        features: ["Guidance for everyday situations", "A community that has been there", "Support groups and events"],
+        icon: Compass
+    },
+    {
+        title: "PracticeOS",
+        audience: "For clinics, therapists and support teams",
+        desc: "Keep enquiries, appointments, care plans and session notes together. Give your team a clearer picture of each person's support, and make it easier to keep families informed.",
+        features: ["Enquiries and appointments", "Care plans and session notes", "Families kept in the loop"],
+        icon: ClipboardList
+    },
+    {
+        title: "Schools & Educators",
+        audience: "For teachers and special educators",
+        desc: "Explore ideas for the classroom and build stronger conversations between school, home and professional support.",
+        features: ["Classroom ideas and resources", "School, home and therapist alignment", "Shared knowledge across the community"],
+        icon: School
+    }
+];
 
 export default function HealthcarePage() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white selection:bg-teal-500/30">
             <Header />
@@ -66,9 +89,17 @@ export default function HealthcarePage() {
                                     Healthcare
                                 </span>
                             </h2>
-                            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Building a connected care ecosystem for the neurodivergent community, bridging families, therapists, and technology to enable early identification, continuous monitoring, and personalized intervention.
+                            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                                Through Upllyft, MindsSparc builds tools that help neurodivergent people and families find guidance, and help professionals organise care.
                             </p>
+                            <a
+                                href={UPLLYFT_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2"
+                            >
+                                Visit Upllyft <ExternalLink className="w-5 h-5" />
+                            </a>
                         </motion.div>
                     </div>
                 </section>
@@ -77,15 +108,15 @@ export default function HealthcarePage() {
                 <section className="py-24 bg-gray-900/30 border-y border-white/5">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold mb-4">The Industry Challenge</h2>
-                            <p className="text-gray-400">Supporting neurodivergent individuals demands more than fragmented care.</p>
+                            <h2 className="text-3xl font-bold mb-4">The Challenge</h2>
+                            <p className="text-gray-400">Support for neurodivergent people is spread across families, clinics and schools.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Fragmented Care Journeys", desc: "Families navigate disconnected systems of therapists, schools, and specialists with no unified view of their child's progress.", icon: Database },
-                                { title: "Delayed Identification", desc: "Limited access to standardized developmental screening means neurodivergent traits are often identified too late for early intervention.", icon: Shield },
-                                { title: "Therapist Overload", desc: "Clinicians spend more time on manual documentation and administrative tasks than on actual patient care and intervention.", icon: Activity }
+                                { title: "Families Searching Alone", desc: "Parents and individuals piece together guidance from scattered sources, often without anyone who has been through the same situation.", icon: MessageCircle },
+                                { title: "Care Spread Across Tools", desc: "Practices juggle enquiries, appointments, care plans and session notes in separate places, leaving no clear picture of each person's support.", icon: Layers },
+                                { title: "Disconnected Support Teams", desc: "Therapists, educators and families rarely share one view, so progress made in one setting is hard to carry into the next.", icon: Users }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -114,20 +145,20 @@ export default function HealthcarePage() {
                             <div className="absolute inset-0 bg-teal-500/10 z-10" />
                             <Image
                                 src="/images/industries/healthcare-need.png"
-                                alt="Interoperability"
+                                alt="Connected support"
                                 fill
                                 className="object-cover transition-all duration-700 hover:scale-105"
                             />
                         </div>
                         <div className="order-1 lg:order-2">
-                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Connected Care</span></h2>
+                            <h2 className="text-4xl font-bold mb-6">The Need of the Hour: <br /><span className="text-teal-400">Connected Support</span></h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                                The future of neurodivergent care is connected. Families, therapists, and support systems must work together through a unified platform, enabling early screening, AI-powered insights, and continuous progress tracking to deliver truly <strong className="text-white">personalized care pathways</strong>.
+                                Guidance, community and connected support belong together. Upllyft brings the people around a neurodivergent person onto one platform, so families feel less alone and professionals can keep the work of supporting people <strong className="text-white">more organised</strong>.
                             </p>
                             <ul className="space-y-4">
-                                {["AI-powered developmental screening and progress monitoring", "Unified case management across multidisciplinary teams", "Data-driven insights that turn observations into actionable intervention plans"].map((item, i) => (
+                                {["Guidance and community for neurodivergent people and families", "Tools that keep each person's care in one place", "Stronger conversations between school, home and professional support"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                                        <CheckCircle className="w-5 h-5 text-teal-500" />
+                                        <CheckCircle className="w-5 h-5 text-teal-500 shrink-0" />
                                         {item}
                                     </li>
                                 ))}
@@ -137,73 +168,38 @@ export default function HealthcarePage() {
                 </section>
 
 
-
                 {/* Powered by Upllyft Section */}
                 <section className="py-24 relative overflow-hidden bg-gray-900/30">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center mb-16">
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-900/20 border border-teal-500/30 text-teal-400 text-sm font-semibold mb-6">
-                                <Activity className="w-4 h-4" /> Powered by Upllyft
+                                <HeartHandshake className="w-4 h-4" /> Powered by Upllyft
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6">Comprehensive Lifecycle Care</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6">One Platform, Everyone Who Helps</h2>
                             <p className="text-xl text-gray-300 leading-relaxed">
-                                MindsSparc integrates <strong>Upllyft</strong> to provide a holistic ecosystem for therapy, education, and long-term support. A connected platform ensuring no stage of care is overlooked.
+                                <strong>Upllyft</strong> is an initiative of MindsSparc, built for clinics, therapists, support teams, families, caregivers and neurodivergent individuals.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                            {[
-                                {
-                                    title: "Care Co-ordination & IEP",
-                                    features: ["Cuts diagnosis-to-therapy lag", "Cross-team goal tracking", "Boosts IEP compliance"],
-                                    icon: Activity
-                                },
-                                {
-                                    title: "Therapy Marketplace",
-                                    features: ["Expands Tier-2/3 access", "Credentialed, verified care", "Higher therapy adherence"],
-                                    icon: Heart
-                                },
-                                {
-                                    title: "Assistive Tech & Devices",
-                                    features: ["Faster access to AAC/mobility", "Insurance-linked procurement", "Standardizes device quality"],
-                                    icon: Smartphone
-                                },
-                                {
-                                    title: "Education & Inclusion",
-                                    features: ["Earlier learning difficulty detection", "Upskills mainstream teachers", "Tracks NEP 2020 compliance"],
-                                    icon: GraduationCap
-                                },
-                                {
-                                    title: "Employment & Skilling",
-                                    features: ["National therapist registry", "Ongoing CPD to prevent burnout", "Inclusion workforce pipeline"],
-                                    icon: Briefcase
-                                },
-                                {
-                                    title: "Stakeholder Community",
-                                    features: ["Improves at-home reinforcement", "Reduces stakeholder burnout", "Strengthens advocacy voice"],
-                                    icon: Users
-                                },
-                                {
-                                    title: "Long-term Financial Planning",
-                                    features: ["Seamless care across life stages", "Guardianship & trust support", "Lifetime care budgeting tools"],
-                                    icon: Wallet
-                                }
-                            ].map((item, i) => (
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {audiences.map((item, i) => (
                                 <motion.div
-                                    key={i}
+                                    key={item.title}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 group"
+                                    className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 group flex flex-col"
                                 >
-                                    <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 mb-4 group-hover:bg-teal-500 group-hover:text-white transition-all">
-                                        <item.icon className="w-5 h-5" />
+                                    <div className="w-12 h-12 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 mb-6 group-hover:bg-teal-500 group-hover:text-white transition-all">
+                                        <item.icon className="w-6 h-6" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-white mb-4">{item.title}</h3>
-                                    <ul className="space-y-2">
+                                    <h3 className="text-2xl font-bold text-white mb-1">{item.title}</h3>
+                                    <p className="text-sm font-semibold text-teal-400 mb-4">{item.audience}</p>
+                                    <p className="text-gray-400 leading-relaxed mb-6">{item.desc}</p>
+                                    <ul className="space-y-2 mt-auto">
                                         {item.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
+                                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-1.5 shrink-0" />
                                                 {feature}
                                             </li>
@@ -218,21 +214,26 @@ export default function HealthcarePage() {
                 {/* CTA */}
                 <section className="py-24">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl font-bold mb-6">Ready to innovate for better outcomes?</h2>
-                        <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
-                        >
-                            Explore Solutions <ArrowRight className="w-5 h-5" />
-                        </button>
+                        <h2 className="text-3xl font-bold mb-6">Ready to connect care?</h2>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <a
+                                href={UPLLYFT_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center justify-center gap-2 hover:scale-105 transform duration-300"
+                            >
+                                Visit Upllyft <ExternalLink className="w-5 h-5" />
+                            </a>
+                            <ConsultationButton
+                                service="Healthcare"
+                                source="Healthcare — Talk to an Expert"
+                                className="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors inline-flex items-center justify-center gap-2"
+                            >
+                                Talk to an Expert <ArrowRight className="w-5 h-5" />
+                            </ConsultationButton>
+                        </div>
                     </div>
                 </section>
-
-                <ConsultationModal
-                    isOpen={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                    defaultService="Healthcare"
-                />
 
             </main>
             <Footer />

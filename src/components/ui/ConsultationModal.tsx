@@ -8,9 +8,10 @@ interface ConsultationModalProps {
     isOpen: boolean;
     onClose: () => void;
     defaultService?: string;
+    source?: string; // Which CTA opened the form, included in the email
 }
 
-export function ConsultationModal({ isOpen, onClose, defaultService = 'General' }: ConsultationModalProps) {
+export function ConsultationModal({ isOpen, onClose, defaultService = 'General', source }: ConsultationModalProps) {
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         goal: '',
@@ -20,13 +21,17 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
         email: '',
         message: ''
     });
+    const [goalLabel, setGoalLabel] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
 
     if (!isOpen) return null;
 
-    const handleNext = () => setStep(step + 1);
+    const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+        // Step 1 fields unmount on step 2, so validate them before moving on
+        if (e.currentTarget.form?.reportValidity()) setStep(step + 1);
+    };
     const handleBack = () => setStep(step - 1);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -38,7 +43,11 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
             const res = await fetch('/api/consultation', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    goal: goalLabel || formData.goal,
+                    source: source ?? (typeof window !== 'undefined' ? window.location.pathname : undefined),
+                }),
             });
 
             if (!res.ok) {
@@ -131,7 +140,10 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                                     required
                                                     className="w-full p-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none bg-white"
                                                     value={formData.goal}
-                                                    onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
+                                                    onChange={(e) => {
+                                                        setFormData({ ...formData, goal: e.target.value });
+                                                        setGoalLabel(e.target.selectedOptions[0]?.text ?? '');
+                                                    }}
                                                 >
                                                     <option value="" disabled>Select a goal...</option>
 
@@ -162,10 +174,9 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
 
                                                     {(defaultService === 'Healthcare' || defaultService === 'Healthcare') && (
                                                         <>
-                                                            <option value="interoperability">Improve data interoperability</option>
-                                                            <option value="patient_experience">Enhance patient experience</option>
-                                                            <option value="compliance">Regulatory compliance (HIPAA/GDPR)</option>
-                                                            <option value="telehealth">Expand telehealth capabilities</option>
+                                                            <option value="practiceos">Organise my practice with PracticeOS</option>
+                                                            <option value="compass">Guidance and community for families (Compass)</option>
+                                                            <option value="upllyft_partner">Partner with Upllyft</option>
                                                         </>
                                                     )}
 
@@ -184,6 +195,22 @@ export function ConsultationModal({ isOpen, onClose, defaultService = 'General' 
                                                             <option value="scale">Scale existing operations</option>
                                                             <option value="transformation">GCC-led Digital Transformation</option>
                                                             <option value="talent">Talent acquisition & branding</option>
+                                                        </>
+                                                    )}
+
+                                                    {defaultService === 'Education' && (
+                                                        <>
+                                                            <option value="sis">Modernise student information systems</option>
+                                                            <option value="personalised_learning">Personalised learning with AI</option>
+                                                            <option value="admin_automation">Automate school administration</option>
+                                                        </>
+                                                    )}
+
+                                                    {defaultService === 'Solutions' && (
+                                                        <>
+                                                            <option value="demo">Request a product demo</option>
+                                                            <option value="pilot">Discuss a pilot</option>
+                                                            <option value="partnership">Explore a partnership</option>
                                                         </>
                                                     )}
 

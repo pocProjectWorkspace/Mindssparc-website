@@ -3,8 +3,15 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from 'framer-motion';
-import {BookOpen, UserCheck, ArrowRight, CheckCircle, School } from 'lucide-react';
+import {BookOpen, UserCheck, ArrowRight, CheckCircle, School, FileText } from 'lucide-react';
 import Image from 'next/image';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
+import { SolutionVideo } from '@/components/ui/SolutionVideo';
+import { SHOW_SOLUTION_VIDEOS } from '@/data/solutions';
+
+// EduCore case study. Client name is pending confirmation, so it stays anonymous for now.
+const EDUCORE_VIDEO = '/videos/educore.mp4';
+const EDUCORE_ONE_PAGER: string | undefined = undefined; // e.g. '/one-pagers/educore.pdf'
 
 export default function EducationPage() {
     return (
@@ -166,13 +173,59 @@ export default function EducationPage() {
                     </div>
                 </section>
 
+                {/* Case Study: EduCore */}
+                <section className="py-24 border-t border-white/5">
+                    <div className="container mx-auto px-6">
+                        <div className={`grid grid-cols-1 gap-12 items-center max-w-6xl mx-auto ${SHOW_SOLUTION_VIDEOS ? 'lg:grid-cols-2' : ''}`}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-900/20 border border-teal-500/30 text-teal-400 text-sm font-semibold mb-6">
+                                    <School className="w-4 h-4" /> Case Study
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4">EduCore: a student information system for a school in France</h2>
+                                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                                    MindsSparc built EduCore, a school management and student information platform that brings students, staff and day-to-day school operations together on one dashboard.
+                                </p>
+                                <ul className="space-y-4 mb-10">
+                                    {["One dashboard for school administration", "Unified student records", "Built and delivered end to end by MindsSparc"].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-3 text-gray-300">
+                                            <CheckCircle className="w-5 h-5 text-teal-500 shrink-0" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                {EDUCORE_ONE_PAGER && (
+                                    <a
+                                        href={EDUCORE_ONE_PAGER}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors inline-flex items-center gap-2"
+                                    >
+                                        <FileText className="w-5 h-5" /> Download one-pager
+                                    </a>
+                                )}
+                            </motion.div>
+
+                            <SolutionVideo src={EDUCORE_VIDEO} title="EduCore" enabled={SHOW_SOLUTION_VIDEOS} />
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA */}
                 <section className="py-24">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl font-bold mb-6">Ready to empower the next generation?</h2>
-                        <button className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300">
+                        <ConsultationButton
+                            service="Education"
+                            source="Education — Explore Solutions"
+                            className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors inline-flex items-center gap-2 hover:scale-105 transform duration-300"
+                        >
                             Explore Solutions <ArrowRight className="w-5 h-5" />
-                        </button>
+                        </ConsultationButton>
                     </div>
                 </section>
 

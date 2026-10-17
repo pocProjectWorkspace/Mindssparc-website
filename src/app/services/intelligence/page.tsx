@@ -2,8 +2,9 @@
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowRight, Brain, Cpu, Database, Network, Scale, Factory } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Database, Network, Scale, Factory, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -84,12 +85,13 @@ export default function IntelligencePage() {
                             </p>
 
                             <div className="flex justify-center gap-4">
-                                <Link
-                                    href="/contact"
+                                <ConsultationButton
+                                    service="Intelligence"
+                                    source="Intelligence — Start your AI Journey"
                                     className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors flex items-center gap-2"
                                 >
                                     Start your AI Journey <ArrowRight className="w-5 h-5" />
-                                </Link>
+                                </ConsultationButton>
                             </div>
                         </motion.div>
                     </div>
@@ -132,6 +134,33 @@ export default function IntelligencePage() {
                                 </motion.div>
                             ))}
                         </div>
+
+                        {/* Explore our solutions — full-width banner, deliberately not a fifth tile */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: 0.4 }}
+                            className="max-w-5xl mx-auto mt-8"
+                        >
+                            <Link
+                                href="/solutions"
+                                className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-teal-900/40 to-cyan-900/20 border border-teal-500/30 hover:border-teal-400/60 transition-all duration-300"
+                            >
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 shrink-0 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                        <Sparkles className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Explore our solutions</h3>
+                                        <p className="text-gray-400">AI-native solutions built across functions and industries.</p>
+                                    </div>
+                                </div>
+                                <span className="flex items-center gap-2 text-teal-400 font-semibold whitespace-nowrap">
+                                    View solutions <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </Link>
+                        </motion.div>
                     </div>
                 </section>
 
@@ -139,12 +168,13 @@ export default function IntelligencePage() {
                 <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to power your future?</h2>
-                        <Link
-                            href="/contact"
+                        <ConsultationButton
+                            service="Intelligence"
+                            source="Intelligence — Start your AI Journey"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white text-lg font-bold rounded-full hover:bg-teal-500 transition-all hover:scale-105 shadow-xl shadow-teal-900/20"
                         >
                             Start your AI Journey <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </ConsultationButton>
                     </div>
                 </section>
             </main>

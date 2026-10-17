@@ -2,41 +2,42 @@
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowRight, Shield, Zap, Search, FileCheck, Umbrella, Activity, Lock } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, Shield, Zap, Search, FileCheck, Network, Activity, Lock } from 'lucide-react';
+import { ConsultationButton } from '@/components/ui/ConsultationButton';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+// Use cases and one-liners as listed on cybermindr.com
 const features = [
     {
         title: 'Attack Path Discovery',
-        description: 'Map and visualize potential exploit routes before attackers find them.',
+        description: "Identify weaknesses, prove what's exploitable, prioritize remediation and strengthen defenses.",
         icon: Search
     },
     {
-        title: 'Threat Exposure Validation',
-        description: 'Validate true risk by simulating real-world attack scenarios.',
+        title: 'Threat Exposure Management',
+        description: 'Scan the internet to uncover known, unknown and unmonitored digital assets, continuously.',
         icon: Zap
     },
     {
         title: 'Portfolio Risk Assessment',
-        description: 'Comprehensive view of cyber risk across your entire asset portfolio.',
+        description: 'Monitor the cyber posture of every portfolio company from one dashboard, with per-entity scores.',
         icon: Activity
     },
     {
-        title: 'Compliance & Risk Assessment',
-        description: 'Ensure regulatory alignment while identifying critical gaps.',
+        title: 'Compliance & Risk',
+        description: 'Meet regulatory requirements, streamline audits and produce defensible evidence of control.',
         icon: FileCheck
     },
     {
-        title: 'Cyber Security Due Diligence',
-        description: 'Deep-dive analysis for M&A, vendors, and critical partnerships.',
+        title: 'Cyber Due Diligence',
+        description: 'Three stages of validated M&A assessment, from pre-signing through integration.',
         icon: Lock
     },
     {
-        title: 'Cyber Insurance Security',
-        description: 'Optimize your security posture to meet insurance requirements.',
-        icon: Umbrella
+        title: 'Third-Party & 4th-Party Risk',
+        description: 'Continuously monitor vendors, suppliers and their sub-processors for breach-leading exposures.',
+        icon: Network
     }
 ];
 
@@ -89,12 +90,13 @@ export default function SecurePage() {
                             </p>
 
                             <div className="flex justify-center gap-4">
-                                <Link
-                                    href="/contact"
+                                <ConsultationButton
+                                    service="Secure"
+                                    source="Secure — Book a Demo"
                                     className="px-8 py-4 bg-white text-gray-950 font-bold rounded-full hover:bg-teal-50 transition-colors flex items-center gap-2"
                                 >
                                     Book a Demo <ArrowRight className="w-5 h-5" />
-                                </Link>
+                                </ConsultationButton>
                             </div>
                         </motion.div>
                     </div>
@@ -187,12 +189,13 @@ export default function SecurePage() {
                 <section className="py-24 bg-gray-950">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to secure your future?</h2>
-                        <Link
-                            href="/contact"
+                        <ConsultationButton
+                            service="Secure"
+                            source="Secure — Book a Demo"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white text-lg font-bold rounded-full hover:bg-teal-500 transition-all hover:scale-105 shadow-xl shadow-teal-900/20"
                         >
                             Book a Demo <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </ConsultationButton>
                     </div>
                 </section>
             </main>

@@ -9,6 +9,7 @@ interface LeaderProfile {
     name: string;
     role: string;
     headline: string;
+    summary: string; // 3–4 line profile shown on the card without hovering
     image: string;
     bio: string[];
     focusAreas: string[];
@@ -19,6 +20,7 @@ const leaders: LeaderProfile[] = [
         name: 'Lakshmi Nair',
         role: 'Co-Founder',
         headline: 'Enterprise transformation leader with three decades of global consulting experience.',
+        summary: 'Over three decades of global consulting, leading multi-cultural teams through complex digital transformations. Former Managing Director at Accenture (UK and Global) and Executive Partner at IBM (Europe and India/South Asia), with deep expertise in Customer Experience across CRM and ERP.',
         image: '/images/Lakshmi%20Nair.png',
         bio: [
             'An accomplished leader with over three decades of Global consulting experience. Lakshmi has successfully led multi-cultural global teams driving complex digital transformations across industries including Utilities, Energy Services, Retail, Automotive, Consumer goods.',
@@ -31,6 +33,7 @@ const leaders: LeaderProfile[] = [
         name: 'Rajesh Parameswaran',
         role: 'Co-Founder',
         headline: 'Transformational leader at the intersection of technology and industry.',
+        summary: 'Over three decades at the intersection of technology and industry, focused on how AI and Industry X.0 reshape manufacturing. Former Executive Director at IBM India/South Asia and Industrial and Distribution Sector Leader at IBM Consulting, and Strategic Engagement Leader at Hewlett Packard Enterprise.',
         image: '/images/Rajesh%20Parameswaran.png',
         bio: [
             'A transformational leader with over three decades of experience working at the intersection of technology and industry. Rajesh has a strong focus on how AI and Industry X.0 reshape manufacturing and industrial enterprises. His leadership style is focussed on building high performance teams and a collaborative partner ecosystem.',
@@ -87,10 +90,10 @@ export function Leadership() {
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-teal-400 transition-colors">{leader.name}</h3>
                             <p className="text-gray-400 font-medium uppercase tracking-wide text-sm mb-2">{leader.role}</p>
-                            <p className="text-gray-500 text-sm line-clamp-2 mb-4">{leader.headline}</p>
+                            <p className="text-gray-300 leading-relaxed mb-4">{leader.summary}</p>
 
-                            <p className="text-teal-400 text-sm font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                View Profile
+                            <p className="text-teal-400 text-sm font-semibold flex items-center gap-1">
+                                View full profile
                             </p>
                         </div>
                     ))}

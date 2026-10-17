@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { solutions } from '@/data/solutions';
 
 const footerLinks = {
     Services: [
@@ -12,6 +13,10 @@ const footerLinks = {
         { name: 'Healthcare', href: '/industries/healthcare' },
         { name: 'Manufacturing', href: '/industries/manufacturing' },
         { name: 'Education', href: '/industries/education' }
+    ],
+    Solutions: [
+        { name: 'All Solutions', href: '/solutions' },
+        ...solutions.map((s) => ({ name: s.name, href: `/solutions#${s.slug}` })),
     ],
     Company: [
         { name: 'About Us', href: '/about' },
@@ -30,7 +35,7 @@ export function Footer() {
     return (
         <footer className="bg-gray-950 text-primary-foreground pt-16 pb-8">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
                             <div className="relative h-32 w-auto aspect-[180/40]">
@@ -48,7 +53,7 @@ export function Footer() {
                         </p>
                     </div>
 
-                    {Object.entries(footerLinks).slice(0, 3).map(([category, links]) => (
+                    {Object.entries(footerLinks).slice(0, 4).map(([category, links]) => (
                         <div key={category}>
                             <h3 className="font-semibold mb-4">{category}</h3>
                             <ul className="space-y-3">
