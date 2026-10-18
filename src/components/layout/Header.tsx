@@ -13,7 +13,7 @@ const navItems = [
         dropdown: true,
         items: [
             { name: 'Vision & Mission', href: '/about' },
-            { name: 'Our Team', href: '/about#leadership' }
+            { name: 'Our Leadership', href: '/about#leadership' }
         ]
     },
     {
@@ -35,6 +35,12 @@ const navItems = [
                     { name: 'Healthcare', href: '/industries/healthcare' },
                     { name: 'Manufacturing', href: '/industries/manufacturing' },
                     { name: 'Education', href: '/industries/education' }
+                ]
+            },
+            {
+                label: 'Solutions',
+                items: [
+                    { name: 'Explore our solutions', href: '/solutions' }
                 ]
             }
         ]
