@@ -47,7 +47,7 @@ export function Leadership() {
     const [selectedLeader, setSelectedLeader] = useState<LeaderProfile | null>(null);
 
     return (
-        <section className="py-24 bg-gray-950 relative overflow-hidden">
+        <section id="leadership" className="py-24 bg-gray-950 relative overflow-hidden scroll-mt-28">
             {/* Background Texture */}
             <div className="absolute inset-0 bg-gray-950">
                 <div className="absolute inset-0 opacity-20"

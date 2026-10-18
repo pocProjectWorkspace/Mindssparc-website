@@ -35,7 +35,7 @@ const features = [
         icon: Lock
     },
     {
-        title: 'Third-Party & 4th-Party Risk',
+        title: 'Third-Party Risk & Cyber Insurance',
         description: 'Continuously monitor vendors, suppliers and their sub-processors for breach-leading exposures.',
         icon: Network
     }

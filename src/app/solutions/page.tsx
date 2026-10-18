@@ -40,7 +40,7 @@ export default function SolutionsPage() {
                                 <span className="text-teal-400">built to work</span>
                             </h2>
                             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                                Products and platforms built across functions and industries, from hiring and skills to AI readiness, app building and care.
+                            Purpose-built AI products, ready to deploy across your business.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-3">
