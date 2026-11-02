@@ -126,7 +126,7 @@ export default function SolutionsPage() {
                                     </motion.div>
 
                                     {showVideo && (
-                                        <SolutionVideo src={solution.video!} title={solution.name} enabled={showVideo} />
+                                        <SolutionVideo src={solution.video!.src} poster={solution.video!.poster} title={solution.name} enabled={showVideo} />
                                     )}
                                 </div>
                             </div>

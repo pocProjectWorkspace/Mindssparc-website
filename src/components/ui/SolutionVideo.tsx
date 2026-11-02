@@ -1,11 +1,11 @@
 interface SolutionVideoProps {
     src: string;
     title: string;
-    enabled: boolean; // Hidden until every offering has its video
+    enabled: boolean; // Lets callers keep a video wired up but hidden
     poster?: string;
 }
 
-// Short (20–25s) product clip. Muted autoplay loop so it behaves like a moving screenshot.
+// Narrated product demo. Click-to-play with a poster frame; only metadata is fetched until the visitor presses play.
 export function SolutionVideo({ src, title, enabled, poster }: SolutionVideoProps) {
     if (!enabled) return null;
 
@@ -16,10 +16,7 @@ export function SolutionVideo({ src, title, enabled, poster }: SolutionVideoProp
                 poster={poster}
                 title={title}
                 aria-label={`${title} product video`}
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
+                className="h-full w-full object-contain"
                 playsInline
                 controls
                 preload="metadata"
