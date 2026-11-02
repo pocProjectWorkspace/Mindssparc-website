@@ -10,7 +10,8 @@ import { SolutionVideo } from '@/components/ui/SolutionVideo';
 import { SHOW_SOLUTION_VIDEOS } from '@/data/solutions';
 
 // EduCore case study. Client name is pending confirmation, so it stays anonymous for now.
-const EDUCORE_VIDEO = '/videos/educore.mp4';
+const EDUCORE_VIDEO: string | undefined = undefined; // e.g. '/videos/educore-demo.mp4'
+const SHOW_EDUCORE_VIDEO = SHOW_SOLUTION_VIDEOS && !!EDUCORE_VIDEO;
 const EDUCORE_ONE_PAGER: string | undefined = undefined; // e.g. '/one-pagers/educore.pdf'
 
 export default function EducationPage() {
@@ -176,7 +177,7 @@ export default function EducationPage() {
                 {/* Case Study: EduCore */}
                 <section className="py-24 border-t border-white/5">
                     <div className="container mx-auto px-6">
-                        <div className={`grid grid-cols-1 gap-12 items-center max-w-6xl mx-auto ${SHOW_SOLUTION_VIDEOS ? 'lg:grid-cols-2' : ''}`}>
+                        <div className={`grid grid-cols-1 gap-12 items-center max-w-6xl mx-auto ${SHOW_EDUCORE_VIDEO ? 'lg:grid-cols-2' : ''}`}>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -210,7 +211,7 @@ export default function EducationPage() {
                                 )}
                             </motion.div>
 
-                            <SolutionVideo src={EDUCORE_VIDEO} title="EduCore" enabled={SHOW_SOLUTION_VIDEOS} />
+                            {SHOW_EDUCORE_VIDEO && <SolutionVideo src={EDUCORE_VIDEO!} title="EduCore" enabled={SHOW_EDUCORE_VIDEO} />}
                         </div>
                     </div>
                 </section>
